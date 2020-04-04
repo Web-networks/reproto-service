@@ -11,6 +11,7 @@ import io.ktor.routing.get
 import io.ktor.routing.post
 import io.ktor.routing.route
 import io.ktor.routing.routing
+import io.ktor.util.KtorExperimentalAPI
 import kotlinx.serialization.SerializationException
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonConfiguration
@@ -19,9 +20,11 @@ import raid.neuroide.reproto.crdt.VectorTimestamp
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
 @Suppress("unused", "UNUSED_PARAMETER")
+@OptIn(KtorExperimentalAPI::class)
 @kotlin.jvm.JvmOverloads
 fun Application.module(testing: Boolean = false) {
-    val service = WebService()
+    val nodeConfig = environment.config.config("ktor.application.service")
+    val service = WebService(nodeConfig)
 
     install(StatusPages) {
         catchStatus {

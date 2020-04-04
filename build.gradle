@@ -18,7 +18,7 @@ repositories {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
-    implementation "com.github.Web-networks:reproto:3db0ce74c3c3caec25543b065c140b66fca30194"
+    implementation "com.github.Web-networks:reproto:94e89c9549468314d0c392985d2e35d1c8591a97"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutine_version"
     implementation "org.jetbrains.exposed:exposed-core:$exposed_version"
     implementation "org.jetbrains.exposed:exposed-dao:$exposed_version"
@@ -27,15 +27,21 @@ dependencies {
     implementation "io.ktor:ktor-server-netty:$ktor_version"
     implementation "ch.qos.logback:logback-classic:$logback_version"
     implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime:$serialization_version"
+    implementation "org.xerial:sqlite-jdbc:3.30.1"
 
     testImplementation "io.ktor:ktor-server-tests:$ktor_version"
     testImplementation "org.jetbrains.kotlin:kotlin-test-common"
     testImplementation "org.jetbrains.kotlin:kotlin-test-junit"
     testImplementation "org.jetbrains.kotlin:kotlin-test"
+    testImplementation "com.h2database:h2:1.4.200"
 }
 
 compileKotlin {
     kotlinOptions.jvmTarget = "1.8"
+
+    kotlinOptions {
+        freeCompilerArgs += "-Xopt-in=kotlin.RequiresOptIn"
+    }
 }
 compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
