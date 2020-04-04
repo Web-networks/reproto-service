@@ -1,0 +1,42 @@
+buildscript {
+}
+
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.3.71'
+    id 'application'
+}
+
+group 'raid.neuroide'
+version '1.0-SNAPSHOT'
+mainClassName = "io.ktor.server.netty.EngineMain"
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    implementation "com.github.Web-networks:reproto:3db0ce74c3c3caec25543b065c140b66fca30194"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutine_version"
+    implementation "org.jetbrains.exposed:exposed-core:$exposed_version"
+    implementation "org.jetbrains.exposed:exposed-dao:$exposed_version"
+    implementation "org.jetbrains.exposed:exposed-jdbc:$exposed_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation "io.ktor:ktor-server-netty:$ktor_version"
+    implementation "ch.qos.logback:logback-classic:$logback_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime:$serialization_version"
+
+    testImplementation "io.ktor:ktor-server-tests:$ktor_version"
+    testImplementation "org.jetbrains.kotlin:kotlin-test-common"
+    testImplementation "org.jetbrains.kotlin:kotlin-test-junit"
+    testImplementation "org.jetbrains.kotlin:kotlin-test"
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+compileTestKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
