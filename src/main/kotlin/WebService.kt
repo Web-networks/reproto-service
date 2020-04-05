@@ -7,11 +7,12 @@ import raid.neuroide.reproto.crdt.VectorTimestamp
 import raid.neuroide.reproto.service.db.Db
 import raid.neuroide.reproto.service.db.PrototypesDb
 import raid.neuroide.reproto.service.db.UpdatesDb
+import raid.neuroide.reproto.service.db.ValuesDb
 
 @OptIn(KtorExperimentalAPI::class)
 class WebService(conf: ApplicationConfig) {
-    private val node = ServiceNode(conf.property("site").getString(), 2000)
     private val db: Db
+    private val node: ServiceNode
 
     init {
         val dbConf = conf.config("db")
@@ -22,6 +23,10 @@ class WebService(conf: ApplicationConfig) {
                 propertyOrNull("password")?.getString()
             )
         }
+
+        val site = conf.property("site").getString()
+        val idCounter = ValuesDb(db).value("${site}::idcounter")
+        node = ServiceNode(site, 2000, idCounter)
 
         initGateways()
     }
