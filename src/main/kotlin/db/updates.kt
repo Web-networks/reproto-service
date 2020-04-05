@@ -3,17 +3,28 @@ package raid.neuroide.reproto.service.db
 import org.jetbrains.exposed.sql.*
 import raid.neuroide.reproto.LogStorageGateway
 
-object Updates : Table("updates") {
-    val prototypeId = Prototypes.varchar("prototype_id", 64)
-    val originSite = Prototypes.varchar("origin", 64)
+private object Updates : Table("updates") {
+    val prototypeId = varchar("prototype_id", 64)
+    val originSite = varchar("origin", 64)
     val originIndex = integer("index")
     val update = text("update")
     val orderIndex = long("order_index").autoIncrement()
 
-    override val primaryKey = PrimaryKey(prototypeId, originSite, originIndex)
+    override val primaryKey = PrimaryKey(orderIndex)
+
+    init {
+        uniqueIndex(prototypeId, originSite, originIndex)
+    }
 }
 
 class UpdatesDb(private val db: Db) : LogStorageGateway {
+    init {
+        db.transaction {
+            SchemaUtils.create(Updates)
+        }
+    }
+
+
     override fun restore(
         prototypeId: String,
         sinceRevision: Map<String, Int>,
@@ -39,7 +50,7 @@ class UpdatesDb(private val db: Db) : LogStorageGateway {
 
     @Suppress("RemoveRedundantQualifierName")
     override fun save(prototypeId: String, entry: LogStorageGateway.Entry): Unit = db.transaction {
-        Updates.replace {
+        Updates.insert {
             it[Updates.prototypeId] = prototypeId
             it[Updates.originIndex] = entry.originIndex
             it[Updates.originSite] = entry.site

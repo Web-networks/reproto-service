@@ -6,12 +6,15 @@ import io.ktor.application.install
 import io.ktor.features.StatusPages
 import io.ktor.http.ContentType
 import io.ktor.http.HttpStatusCode
+import io.ktor.http.content.resources
+import io.ktor.http.content.static
 import io.ktor.request.receiveText
-import io.ktor.routing.get
-import io.ktor.routing.post
-import io.ktor.routing.route
-import io.ktor.routing.routing
+import io.ktor.response.respondBytes
+import io.ktor.response.respondRedirect
+import io.ktor.routing.*
 import io.ktor.util.KtorExperimentalAPI
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import kotlinx.serialization.SerializationException
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonConfiguration
@@ -36,13 +39,12 @@ fun Application.module(testing: Boolean = false) {
     }
 
     routing {
-        route("/updates") {
-            post {
-                call.request.acceptOnly(ContentType.Application.Json)
+        post("/updates") {
+            call.request.acceptOnly(ContentType.Application.Json)
 
-                val data = call.receiveText()
-                service.postUpdate(data)
-            }
+            val data = call.receiveText()
+            service.postUpdate(data)
+            call.respondBytes(byteArrayOf(), status = HttpStatusCode.NoContent)
         }
         route("/prototypes") {
             get("/{id}") {
@@ -65,5 +67,29 @@ fun Application.module(testing: Boolean = false) {
                 call.respondJson(result)
             }
         }
+
+        if (environment.config.propertyOrNull("ktor.application.enableExample")?.getString() == "true") {
+            initExample(service)
+        }
+    }
+}
+
+private fun Routing.initExample(service: WebService) {
+    static {
+        resources("example")
+    }
+
+    var selectedId: String? = null
+    val selectedIdMutex = Mutex()
+    get("/example") {
+        val id = selectedIdMutex.withLock {
+            if (selectedId == null)
+                selectedId = service.createPrototype()
+            selectedId!!
+        }
+        call.respondJson(id)
+    }
+    get("/") {
+        call.respondRedirect("/index.html", true)
     }
 }

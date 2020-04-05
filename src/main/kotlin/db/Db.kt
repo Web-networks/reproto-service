@@ -12,7 +12,7 @@ class Db(url: String? = null, user: String? = null, password: String? = null) {
     private val conn: Database
 
     init {
-        val finalUrl = url ?: "jdbc:sqlite:bot-test.db"
+        val finalUrl = url ?: "jdbc:sqlite:test.sqlite.db"
         val driver = try {
             DriverManager.getDriver(finalUrl).javaClass.name
         } catch (_: SQLException) {

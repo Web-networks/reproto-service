@@ -18,7 +18,7 @@ repositories {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
-    implementation "com.github.Web-networks:reproto:94e89c9549468314d0c392985d2e35d1c8591a97"
+    implementation "com.github.Web-networks:reproto:4c97180975b18931e8d335851a74c4ee6c13b475"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutine_version"
     implementation "org.jetbrains.exposed:exposed-core:$exposed_version"
     implementation "org.jetbrains.exposed:exposed-dao:$exposed_version"

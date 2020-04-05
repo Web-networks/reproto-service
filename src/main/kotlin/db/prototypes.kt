@@ -3,7 +3,7 @@ package raid.neuroide.reproto.service.db
 import org.jetbrains.exposed.sql.*
 import raid.neuroide.reproto.PrototypeStorageGateway
 
-object Prototypes : Table("prototypes") {
+private object Prototypes : Table("prototypes") {
     val id = varchar("id", 64)
     val prototype = text("prototype")
 

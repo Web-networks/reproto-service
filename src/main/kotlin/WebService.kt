@@ -45,6 +45,6 @@ class WebService(conf: ApplicationConfig) {
 
     suspend fun getUpdates(id: String, since: VectorTimestamp): List<String> {
         return node.getUpdates(id, since, 100)
-            ?: throw NotFoundException("Updates since requested revision are not available of specified prototype")
+            ?: throw NotFoundException("Updates since requested revision are not available for specified prototype")
     }
 }

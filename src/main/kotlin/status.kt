@@ -7,7 +7,6 @@ import io.ktor.http.HttpStatusCode
 import io.ktor.request.ApplicationRequest
 import io.ktor.request.contentType
 import io.ktor.util.pipeline.PipelineContext
-import java.lang.RuntimeException
 
 open class StatusException(val status: HttpStatusCode, override val message: String) : RuntimeException()
 
@@ -25,6 +24,6 @@ fun ApplicationRequest.acceptOnly(
     acceptable: ContentType,
     message: String = HttpStatusCode.UnsupportedMediaType.description
 ) {
-    if (contentType() != acceptable)
+    if (contentType().withoutParameters() != acceptable.withoutParameters())
         throw UnsupportedMediaTypeException(message)
 }
