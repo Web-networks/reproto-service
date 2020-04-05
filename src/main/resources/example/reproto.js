@@ -137,8 +137,10 @@
     simpleName: 'ClientGateway',
     interfaces: []
   };
-  function ClientNode(site) {
-    this.context_0 = new DefaultContext(site);
+  function ClientNode(site, idCounterInitial) {
+    if (idCounterInitial === void 0)
+      idCounterInitial = 0;
+    this.context_0 = new DefaultContext(site, idCounterInitial);
     this.upstream_0 = new ClientNode$Upstream(this);
     this.logUpstream_0 = new ClientNode$LogSyncUpstream(this);
     this.serializer_0 = new SerializationManager(this.context_0);
@@ -2516,8 +2518,10 @@
   SequenceOperationMove.prototype.equals = function (other) {
     return this === other || (other !== null && (typeof other === 'object' && (Object.getPrototypeOf(this) === Object.getPrototypeOf(other) && (Kotlin.equals(this.pidFrom, other.pidFrom) && Kotlin.equals(this.pidTo, other.pidTo)))));
   };
-  function DefaultContext(site) {
-    this.idCounter_0 = 0;
+  function DefaultContext(site, idCounterInitial) {
+    if (idCounterInitial === void 0)
+      idCounterInitial = 0;
+    this.idCounter_0 = idCounterInitial;
     this.siteId_6lictw$_0 = new LocalSiteId(site);
   }
   Object.defineProperty(DefaultContext.prototype, 'siteId', {
@@ -2892,10 +2896,8 @@
   });
   Prototype.prototype.addLayer = function (position) {
     var layerId = this.context_0.issueId();
-    var layer = this.createLayer_0(layerId);
     this.layerSequence_0.insert_19mbxw$(position, layerId);
-    this.layersMap_0.put_xwzc9p$(layerId, layer);
-    return layer;
+    return this.getOrCreateLayer_0(layerId);
   };
   Prototype.prototype.moveLayer = function (from, to) {
     this.layerSequence_0.move_vux9f0$(from, to);

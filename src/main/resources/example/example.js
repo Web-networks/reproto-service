@@ -50,7 +50,7 @@ let gateway = {
                         self.processors.forEach(p => p(u))
                     });
                 })
-            }, 800);
+            }, 80);
         }
     }
 };
