@@ -31,10 +31,10 @@ fun Application.module(testing: Boolean = false) {
 
     install(StatusPages) {
         catchStatus {
-            call.respondJson(it.message, it.status)
+            call.respondPlainText(it.message, it.status)
         }
         exception<SerializationException> {
-            call.respondJson("Invalid object", HttpStatusCode.BadRequest)
+            call.respondPlainText("Invalid object", HttpStatusCode.BadRequest)
         }
     }
 
@@ -53,7 +53,7 @@ fun Application.module(testing: Boolean = false) {
             }
             post {
                 val id = service.createPrototype()
-                call.respondJson(id, HttpStatusCode.Created)
+                call.respondPlainText(id, HttpStatusCode.Created)
             }
             get("/{id}/updates") {
                 val id = call.parameters["id"] ?: throw BadRequestException("Specify prototype id")

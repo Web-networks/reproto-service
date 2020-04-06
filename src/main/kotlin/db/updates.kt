@@ -59,6 +59,9 @@ class UpdatesDb(private val db: Db) : LogStorageGateway {
     }
 
     private fun SqlExpressionBuilder.buildSelector(sinceRevision: Map<String, Int>): Expression<Boolean> {
+        if (sinceRevision.isEmpty())
+            return Op.TRUE
+
         val specified = sinceRevision.map {
             Updates.originSite.eq(it.key) and Updates.originIndex.greater(it.value)
         }.reduce { acc, op -> acc or op }
