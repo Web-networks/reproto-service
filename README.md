@@ -1,7 +1,7 @@
 Neuroide Reproto Service
 =======================
 
-This is a server part of prototype representation layer for Neuroide.
+This is a server part of the prototype representation layer for Neuroide.
 
 ### Running
 
@@ -35,7 +35,7 @@ The service is supposed to be used in conjunction with the library reproto, whic
 
 Each update consists of **id chain**, **index** and **payload**.
 
-```json
+```js
 {
 	"id" : {
 		"chain" : [
@@ -60,7 +60,7 @@ Current state of the model is described by its revision. Revision is an associat
 
 Revision is accepted by `GET /prototypes/{id}/updates?since=revision` endpoint as URI parameter to inform the server which updates are already known to the caller and should not be transferred. Here `revision` is a URI-encoded JSON of the following structure:
 
-```json
+```js
 {
 	"times" : {
 		"lc4138" : 6,
@@ -81,7 +81,7 @@ Minor adjsutments can be made with command line arguments.
 ./gradlew run --args="-port=8000 -P:ktor.application.enableExample=false"
 ```
 
-But more convinient way is to provide external provide configuration file.
+But more convenient way is to provide an external configuration file.
 
 ```sh
 ./gradlew run --args="-config=app.conf"
