@@ -37,13 +37,11 @@ Each update consists of **id chain**, **index** and **payload**.
 
 ```js
 {
-	"id" : {
-		"chain" : [
-			"xxx::2", // model id
-			"lc4138::1", // layer id
-			"Surname" // parameter name
-		]
-	},
+	"id" : [
+		"xxx::2", // model id
+		"lc4138::1", // layer id
+		"Surname" // parameter name
+	],
 	"index" : {
 		"site" : "lc4138", // id of the node which issued the update
 		"time" : 7         // local per-model counter of that node
@@ -62,11 +60,9 @@ Revision is accepted by `GET /prototypes/{id}/updates?since=revision` endpoint a
 
 ```js
 {
-	"times" : {
-		"lc4138" : 6,
-		"lc2774" : 25,
-		"serv0" : 16
-	}
+	"lc4138" : 6,
+	"lc2774" : 25,
+	"serv0" : 16
 }
 ```
 

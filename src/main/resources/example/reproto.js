@@ -12,21 +12,29 @@
   }
 }(this, function (_, Kotlin, $module$kotlinx_serialization_kotlinx_serialization_runtime) {
   'use strict';
-  var listOf = Kotlin.kotlin.collections.listOf_mh5how$;
-  var plus = Kotlin.kotlin.collections.plus_mydzjv$;
   var Kind_CLASS = Kotlin.Kind.CLASS;
   var Kind_INTERFACE = Kotlin.Kind.INTERFACE;
   var throwUPAE = Kotlin.throwUPAE;
   var equals = Kotlin.equals;
   var Unit = Kotlin.kotlin.Unit;
   var ensureNotNull = Kotlin.ensureNotNull;
+  var getCallableRef = Kotlin.getCallableRef;
   var ArrayList_init = Kotlin.kotlin.collections.ArrayList_init_287e2$;
   var StructureKind = $module$kotlinx_serialization_kotlinx_serialization_runtime.kotlinx.serialization.StructureKind;
   var SerialDescriptor = $module$kotlinx_serialization_kotlinx_serialization_runtime.kotlinx.serialization.SerialDescriptor_dhifv3$;
   var KSerializer = $module$kotlinx_serialization_kotlinx_serialization_runtime.kotlinx.serialization.KSerializer;
+  var get_list = $module$kotlinx_serialization_kotlinx_serialization_runtime.kotlinx.serialization.builtins.get_list_gekvwj$;
+  var MapSerializer = $module$kotlinx_serialization_kotlinx_serialization_runtime.kotlinx.serialization.builtins.MapSerializer_2yqygg$;
+  var binarySearch = Kotlin.kotlin.collections.binarySearch_jhx6be$;
+  var UnsupportedOperationException_init = Kotlin.kotlin.UnsupportedOperationException_init;
+  var Kind_OBJECT = Kotlin.Kind.OBJECT;
+  var List = Kotlin.kotlin.collections.List;
+  var sort = Kotlin.kotlin.collections.sort_4wi501$;
+  var Math_0 = Math;
+  var Collection = Kotlin.kotlin.collections.Collection;
+  var asList = Kotlin.kotlin.collections.asList_us0mfu$;
   var getPropertyCallableRef = Kotlin.getPropertyCallableRef;
   var compareValuesBy = Kotlin.kotlin.comparisons.compareValuesBy_d999kh$;
-  var Kind_OBJECT = Kotlin.Kind.OBJECT;
   var SerialClassDescImpl = $module$kotlinx_serialization_kotlinx_serialization_runtime.kotlinx.serialization.internal.SerialClassDescImpl;
   var UnknownFieldException = $module$kotlinx_serialization_kotlinx_serialization_runtime.kotlinx.serialization.UnknownFieldException;
   var internal = $module$kotlinx_serialization_kotlinx_serialization_runtime.kotlinx.serialization.internal;
@@ -36,49 +44,51 @@
   var getKClass = Kotlin.getKClass;
   var ContextSerializer = $module$kotlinx_serialization_kotlinx_serialization_runtime.kotlinx.serialization.ContextSerializer;
   var L0 = Kotlin.Long.ZERO;
-  var plus_0 = Kotlin.kotlin.collections.plus_khz7k3$;
+  var plus = Kotlin.kotlin.collections.plus_khz7k3$;
   var compareValues = Kotlin.kotlin.comparisons.compareValues_s00gnj$;
+  var kotlin_js_internal_StringCompanionObject = Kotlin.kotlin.js.internal.StringCompanionObject;
+  var serializer = $module$kotlinx_serialization_kotlinx_serialization_runtime.kotlinx.serialization.builtins.serializer_6eet4j$;
+  var kotlin_js_internal_IntCompanionObject = Kotlin.kotlin.js.internal.IntCompanionObject;
+  var serializer_0 = $module$kotlinx_serialization_kotlinx_serialization_runtime.kotlinx.serialization.builtins.serializer_qn7glr$;
   var LinkedHashMapSerializer = $module$kotlinx_serialization_kotlinx_serialization_runtime.kotlinx.serialization.internal.LinkedHashMapSerializer;
   var to = Kotlin.kotlin.to_ujzrz7$;
   var mutableMapOf = Kotlin.kotlin.collections.mutableMapOf_qfcya0$;
-  var Math_0 = Math;
   var SerializersModule = $module$kotlinx_serialization_kotlinx_serialization_runtime.kotlinx.serialization.modules.SerializersModule_q4tcel$;
   var throwCCE = Kotlin.throwCCE;
   var RuntimeException_init = Kotlin.kotlin.RuntimeException_init_pdl1vj$;
   var RuntimeException = Kotlin.kotlin.RuntimeException;
   var toInt = Kotlin.kotlin.text.toInt_pdl1vz$;
   var toLong = Kotlin.kotlin.text.toLong_pdl1vz$;
+  var toRawBits = Kotlin.doubleToRawBits;
   var PropertyMetadata = Kotlin.PropertyMetadata;
   var ArrayListSerializer = $module$kotlinx_serialization_kotlinx_serialization_runtime.kotlinx.serialization.internal.ArrayListSerializer;
   var IllegalArgumentException_init = Kotlin.kotlin.IllegalArgumentException_init_pdl1vj$;
   var Random = Kotlin.kotlin.random.Random;
   var generateSequence = Kotlin.kotlin.sequences.generateSequence_9ce4rd$;
   var take = Kotlin.kotlin.sequences.take_wuwhe2$;
-  var plus_1 = Kotlin.kotlin.collections.plus_hjm0xj$;
+  var plus_0 = Kotlin.kotlin.collections.plus_hjm0xj$;
   var toMutableList = Kotlin.kotlin.collections.toMutableList_4c7yge$;
   var ObjectSerializer = $module$kotlinx_serialization_kotlinx_serialization_runtime.kotlinx.serialization.internal.ObjectSerializer;
   var collectionSizeOrDefault = Kotlin.kotlin.collections.collectionSizeOrDefault_ba2ldo$;
   var ArrayList_init_0 = Kotlin.kotlin.collections.ArrayList_init_ww73n8$;
   var emptyList = Kotlin.kotlin.collections.emptyList_287e2$;
   var L_1 = Kotlin.Long.NEG_ONE;
-  var sorted = Kotlin.kotlin.collections.sorted_exjks8$;
+  var listOf = Kotlin.kotlin.collections.listOf_mh5how$;
   var IndexOutOfBoundsException_init = Kotlin.kotlin.IndexOutOfBoundsException_init;
+  var IllegalStateException_init = Kotlin.kotlin.IllegalStateException_init_pdl1vj$;
   var PolymorphicSerializer = $module$kotlinx_serialization_kotlinx_serialization_runtime.kotlinx.serialization.PolymorphicSerializer;
   var SealedClassSerializer = $module$kotlinx_serialization_kotlinx_serialization_runtime.kotlinx.serialization.SealedClassSerializer;
+  var plus_1 = Kotlin.kotlin.collections.plus_mydzjv$;
   var toList = Kotlin.kotlin.collections.toList_us0mfu$;
-  var UnsupportedOperationException_init = Kotlin.kotlin.UnsupportedOperationException_init;
   var LinkedHashMap_init = Kotlin.kotlin.collections.LinkedHashMap_init_q3lmfv$;
-  var getCallableRef = Kotlin.getCallableRef;
   var copyToArray = Kotlin.kotlin.collections.copyToArray;
-  var IllegalStateException_init = Kotlin.kotlin.IllegalStateException_init_pdl1vj$;
   var mapOf = Kotlin.kotlin.collections.mapOf_x2b85n$;
-  var plus_2 = $module$kotlinx_serialization_kotlinx_serialization_runtime.kotlinx.serialization.modules.plus_7n7cf$;
   var JsonConfiguration = $module$kotlinx_serialization_kotlinx_serialization_runtime.kotlinx.serialization.json.JsonConfiguration;
   var Json = $module$kotlinx_serialization_kotlinx_serialization_runtime.kotlinx.serialization.json.Json;
-  ChainedUpstream$child$ObjectLiteral.prototype = Object.create(ChainedUpstream.prototype);
-  ChainedUpstream$child$ObjectLiteral.prototype.constructor = ChainedUpstream$child$ObjectLiteral;
-  ClientNode$Upstream.prototype = Object.create(ChainedUpstream.prototype);
-  ClientNode$Upstream.prototype.constructor = ClientNode$Upstream;
+  IndexedSet$Serializer.prototype = Object.create(DelegatedListSerializer.prototype);
+  IndexedSet$Serializer.prototype.constructor = IndexedSet$Serializer;
+  VectorTimestamp$Serializer.prototype = Object.create(DelegatedMapSerializer.prototype);
+  VectorTimestamp$Serializer.prototype.constructor = VectorTimestamp$Serializer;
   IncomparableException.prototype = Object.create(RuntimeException.prototype);
   IncomparableException.prototype.constructor = IncomparableException;
   ObservableCrdt.prototype = Object.create(Crdt.prototype);
@@ -91,6 +101,8 @@
   LongAlias.prototype.constructor = LongAlias;
   BooleanAlias.prototype = Object.create(TypedAlias.prototype);
   BooleanAlias.prototype.constructor = BooleanAlias;
+  DoubleAlias.prototype = Object.create(TypedAlias.prototype);
+  DoubleAlias.prototype.constructor = DoubleAlias;
   Change$Insert.prototype = Object.create(Change.prototype);
   Change$Insert.prototype.constructor = Change$Insert;
   Change$Delete.prototype = Object.create(Change.prototype);
@@ -105,25 +117,41 @@
   SequenceOperationDelete.prototype.constructor = SequenceOperationDelete;
   SequenceOperationMove.prototype = Object.create(SequenceOperation.prototype);
   SequenceOperationMove.prototype.constructor = SequenceOperationMove;
-  function ChainedUpstream() {
+  IdChain$Serializer.prototype = Object.create(DelegatedListSerializer.prototype);
+  IdChain$Serializer.prototype.constructor = IdChain$Serializer;
+  function ChainedUpstreamBud(processor, id) {
+    if (id === void 0)
+      id = IdChain_init([]);
+    this.processor_0 = processor;
+    this.id_0 = id;
+  }
+  ChainedUpstreamBud.prototype.deliver_8lzwlo$ = function (op) {
+    this.processor_0(this.id_0, op);
+  };
+  ChainedUpstreamBud.prototype.child_nw7ga7$ = function (indexIssuer) {
+    return new ChainedUpstream(this.processor_0, this.id_0, indexIssuer);
+  };
+  ChainedUpstreamBud.prototype.child_61zpoe$ = function (additionalId) {
+    return new ChainedUpstreamBud(this.processor_0, this.id_0.plus_61zpoe$(additionalId));
+  };
+  ChainedUpstreamBud.$metadata$ = {
+    kind: Kind_CLASS,
+    simpleName: 'ChainedUpstreamBud',
+    interfaces: []
+  };
+  function ChainedUpstream(processor, id, indexIssuer) {
+    this.processor_0 = processor;
+    this.id_0 = id;
+    this.indexIssuer_0 = indexIssuer;
   }
   ChainedUpstream.prototype.deliver_8lzwlo$ = function (op) {
-    this.process_6qjbx6$(IdChain_init_0([]), op);
+    this.processor_0(this.id_0, op);
   };
-  function ChainedUpstream$child$ObjectLiteral(this$ChainedUpstream, closure$additionalId) {
-    this.this$ChainedUpstream = this$ChainedUpstream;
-    this.closure$additionalId = closure$additionalId;
-    ChainedUpstream.call(this);
-  }
-  ChainedUpstream$child$ObjectLiteral.prototype.process_6qjbx6$ = function (id, op) {
-    this.this$ChainedUpstream.process_6qjbx6$(new IdChain(plus(listOf(this.closure$additionalId), id.chain)), op);
-  };
-  ChainedUpstream$child$ObjectLiteral.$metadata$ = {
-    kind: Kind_CLASS,
-    interfaces: [ChainedUpstream]
+  ChainedUpstream.prototype.nextLocalIndex = function () {
+    return this.indexIssuer_0();
   };
   ChainedUpstream.prototype.child_61zpoe$ = function (additionalId) {
-    return new ChainedUpstream$child$ObjectLiteral(this, additionalId);
+    return new ChainedUpstream(this.processor_0, this.id_0.plus_61zpoe$(additionalId), this.indexIssuer_0);
   };
   ChainedUpstream.$metadata$ = {
     kind: Kind_CLASS,
@@ -137,13 +165,13 @@
     simpleName: 'ClientGateway',
     interfaces: []
   };
-  function ClientNode(site, idCounterInitial) {
-    if (idCounterInitial === void 0)
-      idCounterInitial = 0;
-    this.context_0 = new DefaultContext(site, idCounterInitial);
-    this.upstream_0 = new ClientNode$Upstream(this);
+  function ClientNode(site) {
+    this.siteId_0 = new LocalSiteId(site);
+    this.upstream_0 = new ChainedUpstreamBud(getCallableRef('processSerializedUpdate', function ($receiver, id, op) {
+      return $receiver.processSerializedUpdate_0(id, op), Unit;
+    }.bind(null, this)));
     this.logUpstream_0 = new ClientNode$LogSyncUpstream(this);
-    this.serializer_0 = new SerializationManager(this.context_0);
+    this.serializer_0 = new SerializationManager(this.siteId_0);
     this.gateway_k85e0t$_0 = this.gateway_k85e0t$_0;
     this.currentPrototype_0 = null;
     this.currentPrototypeId_0 = null;
@@ -211,7 +239,7 @@
     this.currentPrototypeId_0 = this.requestedPrototypeId_0;
     this.requestedPrototypeId_0 = null;
     if (proto != null) {
-      proto.setUpstream_5q3qwm$(this.upstream_0.child_61zpoe$(id));
+      proto.setUpstream_bnl62h$(this.upstream_0.child_61zpoe$(id));
       proto.log_8be2vx$.setUpstream_iz29jp$(this.logUpstream_0);
       this.gateway_0.requestSync(id, this.serializer_0.serialize_bd7lk$(proto.log_8be2vx$.currentTimestamp));
     }tmp$ = this.pendingPrototypeCallbacks_0.iterator();
@@ -221,23 +249,14 @@
     }
     this.pendingPrototypeCallbacks_0.clear();
   };
-  function ClientNode$Upstream($outer) {
-    this.$outer = $outer;
-    ChainedUpstream.call(this);
-  }
-  ClientNode$Upstream.prototype.process_6qjbx6$ = function (id, op) {
+  ClientNode.prototype.processSerializedUpdate_0 = function (id, op) {
     var tmp$;
-    tmp$ = this.$outer.currentPrototype_0;
+    tmp$ = this.currentPrototype_0;
     if (tmp$ == null) {
       return;
     }var update = tmp$.log_8be2vx$.issueLocalUpdate_gzoil3$(id, new UpdatePayload(op));
-    var serialized = this.$outer.serializer_0.serialize_ww7k4j$(update);
-    this.$outer.gateway_0.publishUpdate(serialized);
-  };
-  ClientNode$Upstream.$metadata$ = {
-    kind: Kind_CLASS,
-    simpleName: 'Upstream',
-    interfaces: [ChainedUpstream]
+    var serialized = this.serializer_0.serialize_ww7k4j$(update);
+    this.gateway_0.publishUpdate(serialized);
   };
   function ClientNode$LogSyncUpstream($outer) {
     this.$outer = $outer;
@@ -283,6 +302,166 @@
     simpleName: 'ContextualInjectorSerializer',
     interfaces: [KSerializer]
   };
+  function DelegatedListSerializer(elementSerializer) {
+    this.delegate_xwc7fd$_0 = get_list(elementSerializer);
+    this.descriptor_3r8fyb$_0 = this.delegate_xwc7fd$_0.descriptor;
+  }
+  Object.defineProperty(DelegatedListSerializer.prototype, 'descriptor', {
+    get: function () {
+      return this.descriptor_3r8fyb$_0;
+    }
+  });
+  DelegatedListSerializer.prototype.deserialize_nts5qn$ = function (decoder) {
+    return this.construct_4ezy6h$(this.delegate_xwc7fd$_0.deserialize_nts5qn$(decoder));
+  };
+  DelegatedListSerializer.prototype.serialize_awe97i$ = function (encoder, value) {
+    return this.delegate_xwc7fd$_0.serialize_awe97i$(encoder, this.extract_11rb$(value));
+  };
+  DelegatedListSerializer.$metadata$ = {
+    kind: Kind_CLASS,
+    simpleName: 'DelegatedListSerializer',
+    interfaces: [KSerializer]
+  };
+  function DelegatedMapSerializer(keySerializer, valueSerializer) {
+    this.delegate_58en23$_0 = MapSerializer(keySerializer, valueSerializer);
+    this.descriptor_gvwzxh$_0 = this.delegate_58en23$_0.descriptor;
+  }
+  Object.defineProperty(DelegatedMapSerializer.prototype, 'descriptor', {
+    get: function () {
+      return this.descriptor_gvwzxh$_0;
+    }
+  });
+  DelegatedMapSerializer.prototype.deserialize_nts5qn$ = function (decoder) {
+    return this.construct_zan97u$(this.delegate_58en23$_0.deserialize_nts5qn$(decoder));
+  };
+  DelegatedMapSerializer.prototype.serialize_awe97i$ = function (encoder, value) {
+    return this.delegate_58en23$_0.serialize_awe97i$(encoder, this.extract_11rb$(value));
+  };
+  DelegatedMapSerializer.$metadata$ = {
+    kind: Kind_CLASS,
+    simpleName: 'DelegatedMapSerializer',
+    interfaces: [KSerializer]
+  };
+  function IndexedSet() {
+    IndexedSet$Companion_getInstance();
+    this.elements_0 = ArrayList_init();
+  }
+  Object.defineProperty(IndexedSet.prototype, 'size', {
+    get: function () {
+      return this.elements_0.size;
+    }
+  });
+  IndexedSet.prototype.iterator = function () {
+    return this.elements_0.iterator();
+  };
+  IndexedSet.prototype.contains_11rb$ = function (element) {
+    return binarySearch(this.elements_0, element) >= 0;
+  };
+  IndexedSet.prototype.addIndexed_mef7kx$ = function (element) {
+    var position = binarySearch(this.elements_0, element);
+    if (position >= 0)
+      return position;
+    var insertionPoint = (-position | 0) - 1 | 0;
+    this.elements_0.add_wxm5ur$(insertionPoint, element);
+    return insertionPoint;
+  };
+  IndexedSet.prototype.add_mef7kx$ = function (element) {
+    var position = binarySearch(this.elements_0, element);
+    if (position >= 0)
+      return false;
+    this.elements_0.add_wxm5ur$((-position | 0) - 1 | 0, element);
+    return true;
+  };
+  IndexedSet.prototype.get_za3lpa$ = function (index) {
+    return this.elements_0.get_za3lpa$(index);
+  };
+  IndexedSet.prototype.removeAt_za3lpa$ = function (index) {
+    return this.elements_0.removeAt_za3lpa$(index);
+  };
+  IndexedSet.prototype.indexOf_11rb$ = function (element) {
+    var a = binarySearch(this.elements_0, element);
+    return Math_0.max(a, -1);
+  };
+  IndexedSet.prototype.lastIndexOf_11rb$ = function (element) {
+    return this.indexOf_11rb$(element);
+  };
+  IndexedSet.prototype.listIterator = function () {
+    return this.elements_0.listIterator();
+  };
+  IndexedSet.prototype.listIterator_za3lpa$ = function (index) {
+    return this.elements_0.listIterator_za3lpa$(index);
+  };
+  IndexedSet.prototype.subList_vux9f0$ = function (fromIndex, toIndex) {
+    throw UnsupportedOperationException_init();
+  };
+  IndexedSet.prototype.containsAll_brywnq$ = function (elements) {
+    var all$result;
+    all$break: do {
+      var tmp$;
+      if (Kotlin.isType(elements, Collection) && elements.isEmpty()) {
+        all$result = true;
+        break all$break;
+      }tmp$ = elements.iterator();
+      while (tmp$.hasNext()) {
+        var element = tmp$.next();
+        if (!this.contains_11rb$(element)) {
+          all$result = false;
+          break all$break;
+        }}
+      all$result = true;
+    }
+     while (false);
+    return all$result;
+  };
+  IndexedSet.prototype.isEmpty = function () {
+    return this.size === 0;
+  };
+  function IndexedSet$Serializer(elementSerializer) {
+    DelegatedListSerializer.call(this, elementSerializer);
+  }
+  IndexedSet$Serializer.prototype.extract_11rb$ = function (value) {
+    return value.elements_0;
+  };
+  IndexedSet$Serializer.prototype.construct_4ezy6h$ = function (list) {
+    return IndexedSet_init(list);
+  };
+  IndexedSet$Serializer.$metadata$ = {
+    kind: Kind_CLASS,
+    simpleName: 'Serializer',
+    interfaces: [DelegatedListSerializer]
+  };
+  function IndexedSet$Companion() {
+    IndexedSet$Companion_instance = this;
+  }
+  IndexedSet$Companion.prototype.serializer_swdriu$ = function (typeSerial0) {
+    return new IndexedSet$Serializer(typeSerial0);
+  };
+  IndexedSet$Companion.$metadata$ = {
+    kind: Kind_OBJECT,
+    simpleName: 'Companion',
+    interfaces: []
+  };
+  var IndexedSet$Companion_instance = null;
+  function IndexedSet$Companion_getInstance() {
+    if (IndexedSet$Companion_instance === null) {
+      new IndexedSet$Companion();
+    }return IndexedSet$Companion_instance;
+  }
+  IndexedSet.$metadata$ = {
+    kind: Kind_CLASS,
+    simpleName: 'IndexedSet',
+    interfaces: [List]
+  };
+  function IndexedSet_init(elements, $this) {
+    $this = $this || Object.create(IndexedSet.prototype);
+    IndexedSet.call($this);
+    $this.elements_0.addAll_brywnq$(elements);
+    sort($this.elements_0);
+    return $this;
+  }
+  function indexedSetOf(elements) {
+    return IndexedSet_init(asList(elements));
+  }
   function LamportTimestamp(time, site) {
     LamportTimestamp$Companion_getInstance();
     this.time = time;
@@ -613,7 +792,7 @@
   }
   VectorTimestamp.prototype.tryCompareTo_bd7lk$ = function (other) {
     var tmp$, tmp$_0, tmp$_1;
-    var sites = plus_0(this.times.keys, other.times.keys);
+    var sites = plus(this.times.keys, other.times.keys);
     var result = 0;
     tmp$ = sites.iterator();
     while (tmp$.hasNext()) {
@@ -644,7 +823,7 @@
     return a.tryCompareTo_bd7lk$(b) != null;
   };
   VectorTimestamp$Companion.prototype.serializer = function () {
-    return VectorTimestamp$$serializer_getInstance();
+    return new VectorTimestamp$Serializer();
   };
   VectorTimestamp$Companion.$metadata$ = {
     kind: Kind_OBJECT,
@@ -657,63 +836,20 @@
       new VectorTimestamp$Companion();
     }return VectorTimestamp$Companion_instance;
   }
-  function VectorTimestamp$$serializer() {
-    this.descriptor_eutwhv$_0 = new SerialClassDescImpl('raid.neuroide.reproto.crdt.VectorTimestamp', this, 1);
-    this.descriptor.addElement_ivxn3r$('times', false);
-    VectorTimestamp$$serializer_instance = this;
+  function VectorTimestamp$Serializer() {
+    DelegatedMapSerializer.call(this, serializer(kotlin_js_internal_StringCompanionObject), serializer_0(kotlin_js_internal_IntCompanionObject));
   }
-  Object.defineProperty(VectorTimestamp$$serializer.prototype, 'descriptor', {
-    get: function () {
-      return this.descriptor_eutwhv$_0;
-    }
-  });
-  VectorTimestamp$$serializer.prototype.serialize_awe97i$ = function (encoder, value) {
-    var output = encoder.beginStructure_r0sa6z$(this.descriptor, []);
-    output.encodeSerializableElement_blecud$(this.descriptor, 0, new LinkedHashMapSerializer(internal.StringSerializer, internal.IntSerializer), value.times);
-    output.endStructure_qatsm0$(this.descriptor);
+  VectorTimestamp$Serializer.prototype.extract_11rb$ = function (value) {
+    return value.times;
   };
-  VectorTimestamp$$serializer.prototype.deserialize_nts5qn$ = function (decoder) {
-    var index;
-    var bitMask0 = 0;
-    var local0;
-    var input = decoder.beginStructure_r0sa6z$(this.descriptor, []);
-    loopLabel: while (true) {
-      index = input.decodeElementIndex_qatsm0$(this.descriptor);
-      switch (index) {
-        case 0:
-          local0 = (bitMask0 & 1) === 0 ? input.decodeSerializableElement_s44l7r$(this.descriptor, 0, new LinkedHashMapSerializer(internal.StringSerializer, internal.IntSerializer)) : input.updateSerializableElement_ehubvl$(this.descriptor, 0, new LinkedHashMapSerializer(internal.StringSerializer, internal.IntSerializer), local0);
-          bitMask0 |= 1;
-          break;
-        case -1:
-          break loopLabel;
-        default:throw new UnknownFieldException(index);
-      }
-    }
-    input.endStructure_qatsm0$(this.descriptor);
-    return VectorTimestamp_init(bitMask0, local0, null);
+  VectorTimestamp$Serializer.prototype.construct_zan97u$ = function (map) {
+    return new VectorTimestamp(map);
   };
-  VectorTimestamp$$serializer.prototype.childSerializers = function () {
-    return [new LinkedHashMapSerializer(internal.StringSerializer, internal.IntSerializer)];
+  VectorTimestamp$Serializer.$metadata$ = {
+    kind: Kind_CLASS,
+    simpleName: 'Serializer',
+    interfaces: [DelegatedMapSerializer]
   };
-  VectorTimestamp$$serializer.$metadata$ = {
-    kind: Kind_OBJECT,
-    simpleName: '$serializer',
-    interfaces: [GeneratedSerializer]
-  };
-  var VectorTimestamp$$serializer_instance = null;
-  function VectorTimestamp$$serializer_getInstance() {
-    if (VectorTimestamp$$serializer_instance === null) {
-      new VectorTimestamp$$serializer();
-    }return VectorTimestamp$$serializer_instance;
-  }
-  function VectorTimestamp_init(seen1, times, serializationConstructorMarker) {
-    var $this = serializationConstructorMarker || Object.create(VectorTimestamp.prototype);
-    if ((seen1 & 1) === 0)
-      throw new MissingFieldException('times');
-    else
-      $this.times = times;
-    return $this;
-  }
   VectorTimestamp.$metadata$ = {
     kind: Kind_CLASS,
     simpleName: 'VectorTimestamp',
@@ -1297,6 +1433,27 @@
     simpleName: 'BooleanAlias',
     interfaces: [TypedAlias]
   };
+  function DoubleAlias(sourceProperty) {
+    TypedAlias.call(this, sourceProperty);
+  }
+  DoubleAlias.prototype.serialize_11rc$ = function (v) {
+    return toRawBits(v).toString();
+  };
+  DoubleAlias.prototype.deserialize_11rb$ = function (v) {
+    var tmp$;
+    if (v.length === 0)
+      tmp$ = 0.0;
+    else {
+      var bits = toLong(v);
+      tmp$ = Kotlin.doubleFromBits(bits);
+    }
+    return tmp$;
+  };
+  DoubleAlias.$metadata$ = {
+    kind: Kind_CLASS,
+    simpleName: 'DoubleAlias',
+    interfaces: [TypedAlias]
+  };
   function RegisterWrapper(register) {
     this.register_0 = register;
     this.intValue_boyqxt$_0 = new IntAlias(getPropertyCallableRef('value', 0, function ($receiver) {
@@ -1305,6 +1462,11 @@
       $receiver.value = value;
     }.bind(null, this)));
     this.longValue_o7u67y$_0 = new LongAlias(getPropertyCallableRef('value', 0, function ($receiver) {
+      return $receiver.value;
+    }.bind(null, this), function ($receiver, value) {
+      $receiver.value = value;
+    }.bind(null, this)));
+    this.doubleValue_eihz8t$_0 = new DoubleAlias(getPropertyCallableRef('value', 0, function ($receiver) {
       return $receiver.value;
     }.bind(null, this), function ($receiver, value) {
       $receiver.value = value;
@@ -1339,6 +1501,15 @@
     },
     set: function (longValue) {
       this.longValue_o7u67y$_0.setValue_sq4zia$(this, RegisterWrapper$longValue_metadata, longValue);
+    }
+  });
+  var RegisterWrapper$doubleValue_metadata = new PropertyMetadata('doubleValue');
+  Object.defineProperty(RegisterWrapper.prototype, 'doubleValue', {
+    get: function () {
+      return this.doubleValue_eihz8t$_0.getValue_n5byny$(this, RegisterWrapper$doubleValue_metadata);
+    },
+    set: function (doubleValue) {
+      this.doubleValue_eihz8t$_0.setValue_sq4zia$(this, RegisterWrapper$doubleValue_metadata, doubleValue);
     }
   });
   var RegisterWrapper$booleanValue_metadata = new PropertyMetadata('booleanValue');
@@ -1775,7 +1946,7 @@
     }
     var tmp$_0 = generateSequence(LogootStrategy$materialize$lambda);
     var b = level - left.size + 1 | 0;
-    var digits = toMutableList(plus_1(destination, take(tmp$_0, Math_0.max(0, b))));
+    var digits = toMutableList(plus_0(destination, take(tmp$_0, Math_0.max(0, b))));
     var leftTakenIndex = level;
     if ((this.getLevelMax_0(leftTakenIndex) - digits.get_za3lpa$(level) | 0) >= offset) {
       digits.set_wxm5ur$(leftTakenIndex, digits.get_za3lpa$(leftTakenIndex) + offset | 0);
@@ -1825,27 +1996,19 @@
     ObservableCrdt.call(this);
     this.siteId_0 = siteId;
     this.strategy_0 = strategy;
-    this.elements_0 = mutableMapOf([to(LeftId, ''), to(RightId, '')]);
-    this.clock_0 = new PlainClock();
-    this._sortedIdentifiers_0 = null;
+    this.elements_0 = indexedSetOf([Sequence$Sequence$Element_init_0(LeftId), Sequence$Sequence$Element_init_0(RightId)]);
   }
-  Object.defineProperty(Sequence.prototype, 'sortedIdentifiers_0', {
-    get: function () {
-      if (this._sortedIdentifiers_0 == null)
-        this._sortedIdentifiers_0 = sorted(this.elements_0.keys);
-      return ensureNotNull(this._sortedIdentifiers_0);
-    }
-  });
   Object.defineProperty(Sequence.prototype, 'content', {
     get: function () {
-      var $receiver = this.sortedIdentifiers_0;
+      var $receiver = this.elements_0;
       var destination = ArrayList_init();
       var tmp$;
       tmp$ = $receiver.iterator();
       while (tmp$.hasNext()) {
         var element = tmp$.next();
         var tmp$_0;
-        if ((tmp$_0 = (element != null ? element.equals(LeftId) : null) || (element != null ? element.equals(RightId) : null) ? null : this.elements_0.get_11rb$(element)) != null) {
+        var tmp$_1, tmp$_2;
+        if ((tmp$_0 = ((tmp$_1 = element.pid) != null ? tmp$_1.equals(LeftId) : null) || ((tmp$_2 = element.pid) != null ? tmp$_2.equals(RightId) : null) ? null : element.value) != null) {
           destination.add_11rb$(tmp$_0);
         }}
       return destination;
@@ -1857,28 +2020,30 @@
     }
   });
   Sequence.prototype.get_za3lpa$ = function (index) {
-    return this.content.get_za3lpa$(index);
+    if (index >= this.size)
+      throw IndexOutOfBoundsException_init();
+    return this.content.get_za3lpa$(index + 1 | 0);
   };
   Sequence.prototype.insert_19mbxw$ = function (index, content) {
     this.checkLimits_0(index, true);
-    var lId = this.sortedIdentifiers_0.get_za3lpa$(index);
-    var rId = this.sortedIdentifiers_0.get_za3lpa$(index + 1 | 0);
+    var lId = this.elements_0.get_za3lpa$(index).pid;
+    var rId = this.elements_0.get_za3lpa$(index + 1 | 0).pid;
     var newId = this.allocateIdentifier_0(lId, rId);
     var op = new SequenceOperationInsert(newId, content);
     this.commitLocallyGenerated_0(op);
   };
   Sequence.prototype.delete_za3lpa$ = function (index) {
     this.checkLimits_0(index);
-    var id = this.sortedIdentifiers_0.get_za3lpa$(index + 1 | 0);
+    var id = this.elements_0.get_za3lpa$(index + 1 | 0).pid;
     var op = new SequenceOperationDelete(id);
     this.commitLocallyGenerated_0(op);
   };
   Sequence.prototype.move_vux9f0$ = function (from, to) {
     this.checkLimits_0(from);
     this.checkLimits_0(to, true);
-    var fromId = this.sortedIdentifiers_0.get_za3lpa$(from + 1 | 0);
-    var toLId = this.sortedIdentifiers_0.get_za3lpa$(to);
-    var toRId = this.sortedIdentifiers_0.get_za3lpa$(to + 1 | 0);
+    var fromId = this.elements_0.get_za3lpa$(from + 1 | 0).pid;
+    var toLId = this.elements_0.get_za3lpa$(to).pid;
+    var toRId = this.elements_0.get_za3lpa$(to + 1 | 0).pid;
     var newId = this.allocateIdentifier_0(toLId, toRId);
     var op = new SequenceOperationMove(fromId, newId);
     this.commitLocallyGenerated_0(op);
@@ -1896,33 +2061,143 @@
       throw IndexOutOfBoundsException_init();
   };
   Sequence.prototype.allocateIdentifier_0 = function (left, right) {
+    var tmp$;
+    tmp$ = this.myUpstream;
+    if (tmp$ == null) {
+      throw IllegalStateException_init('Upstream is required to generate identifier');
+    }var upstream = tmp$;
     var position = this.strategy_0.allocatePosition_nscbr2$(left.position, right.position, this.siteId_0.id);
-    return new Identifier(position, this.clock_0.next());
+    return new Identifier(position, upstream.nextLocalIndex());
   };
   Sequence.prototype.deliver_8lzwlo$ = function (op) {
-    var tmp$, tmp$_0;
-    this._sortedIdentifiers_0 = null;
+    var tmp$;
     var operation = Kotlin.isType(tmp$ = op, SequenceOperation) ? tmp$ : throwCCE();
     if (Kotlin.isType(operation, SequenceOperationInsert)) {
       var pid = operation.component1()
       , content = operation.component2();
-      var prev = this.elements_0.put_xwzc9p$(pid, content);
-      if (!equals(prev, content)) {
-        this.fire_11rb$(new Change$Insert(-1, content));
+      var element = new Sequence$Element(pid, content);
+      var isAdded = this.elements_0.add_mef7kx$(element);
+      if (isAdded) {
+        this.fire_11rb$(new Change$Insert(this.elements_0.indexOf_11rb$(element) - 1 | 0, content));
       }} else if (Kotlin.isType(operation, SequenceOperationDelete)) {
-      var prev_0 = this.elements_0.remove_11rb$(operation.pid);
-      if (prev_0 != null) {
-        this.fire_11rb$(new Change$Delete(-1, prev_0));
+      var index = this.elements_0.indexOf_11rb$(Sequence$Sequence$Element_init_0(operation.pid));
+      if (index >= 0) {
+        var content_0 = this.elements_0.removeAt_za3lpa$(index).value;
+        this.fire_11rb$(new Change$Delete(index - 1 | 0, content_0));
       }} else if (Kotlin.isType(operation, SequenceOperationMove)) {
-      if ((tmp$_0 = this.elements_0.get_11rb$(operation.pidFrom)) != null) {
-        var $receiver = this.elements_0;
-        var key = operation.pidTo;
-        $receiver.put_xwzc9p$(key, tmp$_0);
-        this.elements_0.remove_11rb$(operation.pidFrom);
-        this.fire_11rb$(new Change$Move(-1, -1, tmp$_0));
+      var fromIndex = this.elements_0.indexOf_11rb$(Sequence$Sequence$Element_init_0(operation.pidFrom));
+      if (fromIndex >= 0) {
+        var content_1 = this.elements_0.get_za3lpa$(fromIndex).value;
+        var newElement = new Sequence$Element(operation.pidTo, content_1);
+        this.elements_0.removeAt_za3lpa$(fromIndex);
+        var toIndex = this.elements_0.addIndexed_mef7kx$(newElement);
+        this.fire_11rb$(new Change$Move(fromIndex - 1 | 0, toIndex - 1 | 0, content_1));
       }} else
       return;
   };
+  function Sequence$Element(pid, value) {
+    Sequence$Element$Companion_getInstance();
+    this.pid = pid;
+    this.value = value;
+  }
+  Sequence$Element.prototype.compareTo_11rb$ = function (other) {
+    return compareValues(this.pid, other.pid);
+  };
+  function Sequence$Element$Companion() {
+    Sequence$Element$Companion_instance = this;
+  }
+  Sequence$Element$Companion.prototype.serializer = function () {
+    return Sequence$Element$$serializer_getInstance();
+  };
+  Sequence$Element$Companion.$metadata$ = {
+    kind: Kind_OBJECT,
+    simpleName: 'Companion',
+    interfaces: []
+  };
+  var Sequence$Element$Companion_instance = null;
+  function Sequence$Element$Companion_getInstance() {
+    if (Sequence$Element$Companion_instance === null) {
+      new Sequence$Element$Companion();
+    }return Sequence$Element$Companion_instance;
+  }
+  function Sequence$Element$$serializer() {
+    this.descriptor_trmvry$_0 = new SerialClassDescImpl('raid.neuroide.reproto.crdt.seq.Sequence.Element', this, 2);
+    this.descriptor.addElement_ivxn3r$('pid', false);
+    this.descriptor.addElement_ivxn3r$('value', false);
+    Sequence$Element$$serializer_instance = this;
+  }
+  Object.defineProperty(Sequence$Element$$serializer.prototype, 'descriptor', {
+    get: function () {
+      return this.descriptor_trmvry$_0;
+    }
+  });
+  Sequence$Element$$serializer.prototype.serialize_awe97i$ = function (encoder, value) {
+    var output = encoder.beginStructure_r0sa6z$(this.descriptor, []);
+    output.encodeSerializableElement_blecud$(this.descriptor, 0, Identifier$$serializer_getInstance(), value.pid);
+    output.encodeStringElement_bgm7zs$(this.descriptor, 1, value.value);
+    output.endStructure_qatsm0$(this.descriptor);
+  };
+  Sequence$Element$$serializer.prototype.deserialize_nts5qn$ = function (decoder) {
+    var index;
+    var bitMask0 = 0;
+    var local0
+    , local1;
+    var input = decoder.beginStructure_r0sa6z$(this.descriptor, []);
+    loopLabel: while (true) {
+      index = input.decodeElementIndex_qatsm0$(this.descriptor);
+      switch (index) {
+        case 0:
+          local0 = (bitMask0 & 1) === 0 ? input.decodeSerializableElement_s44l7r$(this.descriptor, 0, Identifier$$serializer_getInstance()) : input.updateSerializableElement_ehubvl$(this.descriptor, 0, Identifier$$serializer_getInstance(), local0);
+          bitMask0 |= 1;
+          break;
+        case 1:
+          local1 = input.decodeStringElement_3zr2iy$(this.descriptor, 1);
+          bitMask0 |= 2;
+          break;
+        case -1:
+          break loopLabel;
+        default:throw new UnknownFieldException(index);
+      }
+    }
+    input.endStructure_qatsm0$(this.descriptor);
+    return Sequence$Sequence$Element_init(bitMask0, local0, local1, null);
+  };
+  Sequence$Element$$serializer.prototype.childSerializers = function () {
+    return [Identifier$$serializer_getInstance(), internal.StringSerializer];
+  };
+  Sequence$Element$$serializer.$metadata$ = {
+    kind: Kind_OBJECT,
+    simpleName: '$serializer',
+    interfaces: [GeneratedSerializer]
+  };
+  var Sequence$Element$$serializer_instance = null;
+  function Sequence$Element$$serializer_getInstance() {
+    if (Sequence$Element$$serializer_instance === null) {
+      new Sequence$Element$$serializer();
+    }return Sequence$Element$$serializer_instance;
+  }
+  function Sequence$Sequence$Element_init(seen1, pid, value, serializationConstructorMarker) {
+    var $this = serializationConstructorMarker || Object.create(Sequence$Element.prototype);
+    if ((seen1 & 1) === 0)
+      throw new MissingFieldException('pid');
+    else
+      $this.pid = pid;
+    if ((seen1 & 2) === 0)
+      throw new MissingFieldException('value');
+    else
+      $this.value = value;
+    return $this;
+  }
+  Sequence$Element.$metadata$ = {
+    kind: Kind_CLASS,
+    simpleName: 'Element',
+    interfaces: [Comparable]
+  };
+  function Sequence$Sequence$Element_init_0(pid, $this) {
+    $this = $this || Object.create(Sequence$Element.prototype);
+    Sequence$Element.call($this, pid, '');
+    return $this;
+  }
   function Sequence$Companion() {
     Sequence$Companion_instance = this;
   }
@@ -1956,8 +2231,8 @@
     var output = encoder.beginStructure_r0sa6z$(this.descriptor, []);
     output.encodeSerializableElement_blecud$(this.descriptor, 0, new ContextSerializer(getKClass(LocalSiteId)), value.siteId_0);
     output.encodeSerializableElement_blecud$(this.descriptor, 1, new PolymorphicSerializer(getKClass(AllocationStrategy)), value.strategy_0);
-    if (!equals(value.elements_0, mutableMapOf([to(LeftId, ''), to(RightId, '')])) || output.shouldEncodeElementDefault_3zr2iy$(this.descriptor, 2))
-      output.encodeSerializableElement_blecud$(this.descriptor, 2, new LinkedHashMapSerializer(Identifier$$serializer_getInstance(), internal.StringSerializer), value.elements_0);
+    if (!equals(value.elements_0, indexedSetOf([Sequence$Sequence$Element_init_0(LeftId), Sequence$Sequence$Element_init_0(RightId)])) || output.shouldEncodeElementDefault_3zr2iy$(this.descriptor, 2))
+      output.encodeSerializableElement_blecud$(this.descriptor, 2, new IndexedSet$Serializer(Sequence$Element$$serializer_getInstance()), value.elements_0);
     output.endStructure_qatsm0$(this.descriptor);
   };
   Sequence$$serializer.prototype.deserialize_nts5qn$ = function (decoder) {
@@ -1979,7 +2254,7 @@
           bitMask0 |= 2;
           break;
         case 2:
-          local2 = (bitMask0 & 4) === 0 ? input.decodeSerializableElement_s44l7r$(this.descriptor, 2, new LinkedHashMapSerializer(Identifier$$serializer_getInstance(), internal.StringSerializer)) : input.updateSerializableElement_ehubvl$(this.descriptor, 2, new LinkedHashMapSerializer(Identifier$$serializer_getInstance(), internal.StringSerializer), local2);
+          local2 = (bitMask0 & 4) === 0 ? input.decodeSerializableElement_s44l7r$(this.descriptor, 2, new IndexedSet$Serializer(Sequence$Element$$serializer_getInstance())) : input.updateSerializableElement_ehubvl$(this.descriptor, 2, new IndexedSet$Serializer(Sequence$Element$$serializer_getInstance()), local2);
           bitMask0 |= 4;
           break;
         case -1:
@@ -1991,7 +2266,7 @@
     return Sequence_init(bitMask0, local0, local1, local2, null);
   };
   Sequence$$serializer.prototype.childSerializers = function () {
-    return [new ContextSerializer(getKClass(LocalSiteId)), new PolymorphicSerializer(getKClass(AllocationStrategy)), new LinkedHashMapSerializer(Identifier$$serializer_getInstance(), internal.StringSerializer)];
+    return [new ContextSerializer(getKClass(LocalSiteId)), new PolymorphicSerializer(getKClass(AllocationStrategy)), new IndexedSet$Serializer(Sequence$Element$$serializer_getInstance())];
   };
   Sequence$$serializer.$metadata$ = {
     kind: Kind_OBJECT,
@@ -2016,140 +2291,15 @@
     else
       $this.strategy_0 = strategy;
     if ((seen1 & 4) === 0)
-      $this.elements_0 = mutableMapOf([to(LeftId, ''), to(RightId, '')]);
+      $this.elements_0 = indexedSetOf([Sequence$Sequence$Element_init_0(LeftId), Sequence$Sequence$Element_init_0(RightId)]);
     else
       $this.elements_0 = elements;
-    $this.clock_0 = new PlainClock();
-    $this._sortedIdentifiers_0 = null;
     return $this;
   }
   Sequence.$metadata$ = {
     kind: Kind_CLASS,
     simpleName: 'Sequence',
     interfaces: [ObservableCrdt]
-  };
-  function SequenceElement(pid, content) {
-    SequenceElement$Companion_getInstance();
-    this.pid = pid;
-    this.content = content;
-  }
-  SequenceElement.prototype.compareTo_11rb$ = function (other) {
-    return compareValuesBy(this, other, [getPropertyCallableRef('pid', 1, function ($receiver) {
-      return $receiver.pid;
-    }), getPropertyCallableRef('content', 1, function ($receiver) {
-      return $receiver.content;
-    })]);
-  };
-  function SequenceElement$Companion() {
-    SequenceElement$Companion_instance = this;
-  }
-  SequenceElement$Companion.prototype.serializer = function () {
-    return SequenceElement$$serializer_getInstance();
-  };
-  SequenceElement$Companion.$metadata$ = {
-    kind: Kind_OBJECT,
-    simpleName: 'Companion',
-    interfaces: []
-  };
-  var SequenceElement$Companion_instance = null;
-  function SequenceElement$Companion_getInstance() {
-    if (SequenceElement$Companion_instance === null) {
-      new SequenceElement$Companion();
-    }return SequenceElement$Companion_instance;
-  }
-  function SequenceElement$$serializer() {
-    this.descriptor_igwkk6$_0 = new SerialClassDescImpl('raid.neuroide.reproto.crdt.seq.SequenceElement', this, 2);
-    this.descriptor.addElement_ivxn3r$('pid', false);
-    this.descriptor.addElement_ivxn3r$('content', false);
-    SequenceElement$$serializer_instance = this;
-  }
-  Object.defineProperty(SequenceElement$$serializer.prototype, 'descriptor', {
-    get: function () {
-      return this.descriptor_igwkk6$_0;
-    }
-  });
-  SequenceElement$$serializer.prototype.serialize_awe97i$ = function (encoder, value) {
-    var output = encoder.beginStructure_r0sa6z$(this.descriptor, []);
-    output.encodeSerializableElement_blecud$(this.descriptor, 0, Identifier$$serializer_getInstance(), value.pid);
-    output.encodeStringElement_bgm7zs$(this.descriptor, 1, value.content);
-    output.endStructure_qatsm0$(this.descriptor);
-  };
-  SequenceElement$$serializer.prototype.deserialize_nts5qn$ = function (decoder) {
-    var index;
-    var bitMask0 = 0;
-    var local0
-    , local1;
-    var input = decoder.beginStructure_r0sa6z$(this.descriptor, []);
-    loopLabel: while (true) {
-      index = input.decodeElementIndex_qatsm0$(this.descriptor);
-      switch (index) {
-        case 0:
-          local0 = (bitMask0 & 1) === 0 ? input.decodeSerializableElement_s44l7r$(this.descriptor, 0, Identifier$$serializer_getInstance()) : input.updateSerializableElement_ehubvl$(this.descriptor, 0, Identifier$$serializer_getInstance(), local0);
-          bitMask0 |= 1;
-          break;
-        case 1:
-          local1 = input.decodeStringElement_3zr2iy$(this.descriptor, 1);
-          bitMask0 |= 2;
-          break;
-        case -1:
-          break loopLabel;
-        default:throw new UnknownFieldException(index);
-      }
-    }
-    input.endStructure_qatsm0$(this.descriptor);
-    return SequenceElement_init(bitMask0, local0, local1, null);
-  };
-  SequenceElement$$serializer.prototype.childSerializers = function () {
-    return [Identifier$$serializer_getInstance(), internal.StringSerializer];
-  };
-  SequenceElement$$serializer.$metadata$ = {
-    kind: Kind_OBJECT,
-    simpleName: '$serializer',
-    interfaces: [GeneratedSerializer]
-  };
-  var SequenceElement$$serializer_instance = null;
-  function SequenceElement$$serializer_getInstance() {
-    if (SequenceElement$$serializer_instance === null) {
-      new SequenceElement$$serializer();
-    }return SequenceElement$$serializer_instance;
-  }
-  function SequenceElement_init(seen1, pid, content, serializationConstructorMarker) {
-    var $this = serializationConstructorMarker || Object.create(SequenceElement.prototype);
-    if ((seen1 & 1) === 0)
-      throw new MissingFieldException('pid');
-    else
-      $this.pid = pid;
-    if ((seen1 & 2) === 0)
-      throw new MissingFieldException('content');
-    else
-      $this.content = content;
-    return $this;
-  }
-  SequenceElement.$metadata$ = {
-    kind: Kind_CLASS,
-    simpleName: 'SequenceElement',
-    interfaces: [Comparable]
-  };
-  SequenceElement.prototype.component1 = function () {
-    return this.pid;
-  };
-  SequenceElement.prototype.component2 = function () {
-    return this.content;
-  };
-  SequenceElement.prototype.copy_vaifv$ = function (pid, content) {
-    return new SequenceElement(pid === void 0 ? this.pid : pid, content === void 0 ? this.content : content);
-  };
-  SequenceElement.prototype.toString = function () {
-    return 'SequenceElement(pid=' + Kotlin.toString(this.pid) + (', content=' + Kotlin.toString(this.content)) + ')';
-  };
-  SequenceElement.prototype.hashCode = function () {
-    var result = 0;
-    result = result * 31 + Kotlin.hashCode(this.pid) | 0;
-    result = result * 31 + Kotlin.hashCode(this.content) | 0;
-    return result;
-  };
-  SequenceElement.prototype.equals = function (other) {
-    return this === other || (other !== null && (typeof other === 'object' && (Object.getPrototypeOf(this) === Object.getPrototypeOf(other) && (Kotlin.equals(this.pid, other.pid) && Kotlin.equals(this.content, other.content)))));
   };
   function SequenceOperation() {
     SequenceOperation$Companion_getInstance();
@@ -2518,26 +2668,6 @@
   SequenceOperationMove.prototype.equals = function (other) {
     return this === other || (other !== null && (typeof other === 'object' && (Object.getPrototypeOf(this) === Object.getPrototypeOf(other) && (Kotlin.equals(this.pidFrom, other.pidFrom) && Kotlin.equals(this.pidTo, other.pidTo)))));
   };
-  function DefaultContext(site, idCounterInitial) {
-    if (idCounterInitial === void 0)
-      idCounterInitial = 0;
-    this.idCounter_0 = idCounterInitial;
-    this.siteId_6lictw$_0 = new LocalSiteId(site);
-  }
-  Object.defineProperty(DefaultContext.prototype, 'siteId', {
-    get: function () {
-      return this.siteId_6lictw$_0;
-    }
-  });
-  DefaultContext.prototype.issueId = function () {
-    this.idCounter_0 = this.idCounter_0 + 1 | 0;
-    return this.siteId.id + '::' + this.idCounter_0;
-  };
-  DefaultContext.$metadata$ = {
-    kind: Kind_CLASS,
-    simpleName: 'DefaultContext',
-    interfaces: [NodeContext]
-  };
   function IdChain(chain) {
     IdChain$Companion_getInstance();
     this.chain = chain;
@@ -2552,11 +2682,28 @@
       return this.index_0 < this.chain.size;
     }
   });
+  IdChain.prototype.plus_61zpoe$ = function (id) {
+    return new IdChain(plus_1(this.chain, listOf(id)));
+  };
+  function IdChain$Serializer() {
+    DelegatedListSerializer.call(this, serializer(kotlin_js_internal_StringCompanionObject));
+  }
+  IdChain$Serializer.prototype.extract_11rb$ = function (value) {
+    return value.chain;
+  };
+  IdChain$Serializer.prototype.construct_4ezy6h$ = function (list) {
+    return new IdChain(list);
+  };
+  IdChain$Serializer.$metadata$ = {
+    kind: Kind_CLASS,
+    simpleName: 'Serializer',
+    interfaces: [DelegatedListSerializer]
+  };
   function IdChain$Companion() {
     IdChain$Companion_instance = this;
   }
   IdChain$Companion.prototype.serializer = function () {
-    return IdChain$$serializer_getInstance();
+    return new IdChain$Serializer();
   };
   IdChain$Companion.$metadata$ = {
     kind: Kind_OBJECT,
@@ -2569,77 +2716,19 @@
       new IdChain$Companion();
     }return IdChain$Companion_instance;
   }
-  function IdChain$$serializer() {
-    this.descriptor_cndas7$_0 = new SerialClassDescImpl('raid.neuroide.reproto.IdChain', this, 1);
-    this.descriptor.addElement_ivxn3r$('chain', false);
-    IdChain$$serializer_instance = this;
-  }
-  Object.defineProperty(IdChain$$serializer.prototype, 'descriptor', {
-    get: function () {
-      return this.descriptor_cndas7$_0;
-    }
-  });
-  IdChain$$serializer.prototype.serialize_awe97i$ = function (encoder, value) {
-    var output = encoder.beginStructure_r0sa6z$(this.descriptor, []);
-    output.encodeSerializableElement_blecud$(this.descriptor, 0, new ArrayListSerializer(internal.StringSerializer), value.chain);
-    output.endStructure_qatsm0$(this.descriptor);
-  };
-  IdChain$$serializer.prototype.deserialize_nts5qn$ = function (decoder) {
-    var index;
-    var bitMask0 = 0;
-    var local0;
-    var input = decoder.beginStructure_r0sa6z$(this.descriptor, []);
-    loopLabel: while (true) {
-      index = input.decodeElementIndex_qatsm0$(this.descriptor);
-      switch (index) {
-        case 0:
-          local0 = (bitMask0 & 1) === 0 ? input.decodeSerializableElement_s44l7r$(this.descriptor, 0, new ArrayListSerializer(internal.StringSerializer)) : input.updateSerializableElement_ehubvl$(this.descriptor, 0, new ArrayListSerializer(internal.StringSerializer), local0);
-          bitMask0 |= 1;
-          break;
-        case -1:
-          break loopLabel;
-        default:throw new UnknownFieldException(index);
-      }
-    }
-    input.endStructure_qatsm0$(this.descriptor);
-    return IdChain_init(bitMask0, local0, null);
-  };
-  IdChain$$serializer.prototype.childSerializers = function () {
-    return [new ArrayListSerializer(internal.StringSerializer)];
-  };
-  IdChain$$serializer.$metadata$ = {
-    kind: Kind_OBJECT,
-    simpleName: '$serializer',
-    interfaces: [GeneratedSerializer]
-  };
-  var IdChain$$serializer_instance = null;
-  function IdChain$$serializer_getInstance() {
-    if (IdChain$$serializer_instance === null) {
-      new IdChain$$serializer();
-    }return IdChain$$serializer_instance;
-  }
-  function IdChain_init(seen1, chain, serializationConstructorMarker) {
-    var $this = serializationConstructorMarker || Object.create(IdChain.prototype);
-    if ((seen1 & 1) === 0)
-      throw new MissingFieldException('chain');
-    else
-      $this.chain = chain;
-    $this.index_0 = 0;
-    return $this;
-  }
   IdChain.$metadata$ = {
     kind: Kind_CLASS,
     simpleName: 'IdChain',
     interfaces: []
   };
-  function IdChain_init_0(ids, $this) {
+  function IdChain_init(ids, $this) {
     $this = $this || Object.create(IdChain.prototype);
     IdChain.call($this, toList(ids));
     return $this;
   }
-  function Layer(context) {
+  function Layer(siteId) {
     Layer$Companion_getInstance();
-    this.context_0 = context;
+    this.siteId_0 = siteId;
     this.parameters_0 = LinkedHashMap_init();
     this.listeners_0 = null;
     this.myUpstream_0 = null;
@@ -2704,7 +2793,7 @@
   }
   Layer.prototype.createRegister_0 = function (paramName) {
     var tmp$;
-    var rg = LWWRegister_init_0('', this.context_0.siteId);
+    var rg = LWWRegister_init_0('', this.siteId_0);
     if (this.listeners_0 != null)
       rg.setListener_rslci1$(Layer$createRegister$lambda(paramName, this));
     if ((tmp$ = this.myUpstream_0) != null) {
@@ -2746,7 +2835,7 @@
   }
   function Layer$$serializer() {
     this.descriptor_x2ata$_0 = new SerialClassDescImpl('raid.neuroide.reproto.Layer', this, 2);
-    this.descriptor.addElement_ivxn3r$('context', false);
+    this.descriptor.addElement_ivxn3r$('siteId', false);
     this.descriptor.addElement_ivxn3r$('parameters', true);
     Layer$$serializer_instance = this;
   }
@@ -2757,7 +2846,7 @@
   });
   Layer$$serializer.prototype.serialize_awe97i$ = function (encoder, value) {
     var output = encoder.beginStructure_r0sa6z$(this.descriptor, []);
-    output.encodeSerializableElement_blecud$(this.descriptor, 0, new ContextSerializer(getKClass(NodeContextWrapper)), value.context_0);
+    output.encodeSerializableElement_blecud$(this.descriptor, 0, new ContextSerializer(getKClass(LocalSiteId)), value.siteId_0);
     if (!equals(value.parameters_0, LinkedHashMap_init()) || output.shouldEncodeElementDefault_3zr2iy$(this.descriptor, 1))
       output.encodeSerializableElement_blecud$(this.descriptor, 1, new LinkedHashMapSerializer(internal.StringSerializer, LWWRegister$$serializer_getInstance()), value.parameters_0);
     output.endStructure_qatsm0$(this.descriptor);
@@ -2772,7 +2861,7 @@
       index = input.decodeElementIndex_qatsm0$(this.descriptor);
       switch (index) {
         case 0:
-          local0 = (bitMask0 & 1) === 0 ? input.decodeSerializableElement_s44l7r$(this.descriptor, 0, new ContextSerializer(getKClass(NodeContextWrapper))) : input.updateSerializableElement_ehubvl$(this.descriptor, 0, new ContextSerializer(getKClass(NodeContextWrapper)), local0);
+          local0 = (bitMask0 & 1) === 0 ? input.decodeSerializableElement_s44l7r$(this.descriptor, 0, new ContextSerializer(getKClass(LocalSiteId))) : input.updateSerializableElement_ehubvl$(this.descriptor, 0, new ContextSerializer(getKClass(LocalSiteId)), local0);
           bitMask0 |= 1;
           break;
         case 1:
@@ -2788,7 +2877,7 @@
     return Layer_init(bitMask0, local0, local1, null);
   };
   Layer$$serializer.prototype.childSerializers = function () {
-    return [new ContextSerializer(getKClass(NodeContextWrapper)), new LinkedHashMapSerializer(internal.StringSerializer, LWWRegister$$serializer_getInstance())];
+    return [new ContextSerializer(getKClass(LocalSiteId)), new LinkedHashMapSerializer(internal.StringSerializer, LWWRegister$$serializer_getInstance())];
   };
   Layer$$serializer.$metadata$ = {
     kind: Kind_OBJECT,
@@ -2801,12 +2890,12 @@
       new Layer$$serializer();
     }return Layer$$serializer_instance;
   }
-  function Layer_init(seen1, context, parameters, serializationConstructorMarker) {
+  function Layer_init(seen1, siteId, parameters, serializationConstructorMarker) {
     var $this = serializationConstructorMarker || Object.create(Layer.prototype);
     if ((seen1 & 1) === 0)
-      throw new MissingFieldException('context');
+      throw new MissingFieldException('siteId');
     else
-      $this.context_0 = context;
+      $this.siteId_0 = siteId;
     if ((seen1 & 2) === 0) {
       $this.parameters_0 = LinkedHashMap_init();
     } else
@@ -2827,59 +2916,14 @@
     simpleName: 'LogUpstream',
     interfaces: []
   };
-  function NodeContext() {
-  }
-  NodeContext.$metadata$ = {
-    kind: Kind_INTERFACE,
-    simpleName: 'NodeContext',
-    interfaces: []
-  };
-  function NodeContextWrapper(impl) {
-    NodeContextWrapper$Companion_getInstance();
-    this.$delegate_bphh46$_0 = impl;
-  }
-  function NodeContextWrapper$Companion() {
-    NodeContextWrapper$Companion_instance = this;
-  }
-  NodeContextWrapper$Companion.prototype.serializer = function () {
-    return new ContextSerializer(getKClass(NodeContextWrapper));
-  };
-  NodeContextWrapper$Companion.$metadata$ = {
-    kind: Kind_OBJECT,
-    simpleName: 'Companion',
-    interfaces: []
-  };
-  var NodeContextWrapper$Companion_instance = null;
-  function NodeContextWrapper$Companion_getInstance() {
-    if (NodeContextWrapper$Companion_instance === null) {
-      new NodeContextWrapper$Companion();
-    }return NodeContextWrapper$Companion_instance;
-  }
-  Object.defineProperty(NodeContextWrapper.prototype, 'siteId', {
-    get: function () {
-      return this.$delegate_bphh46$_0.siteId;
-    }
-  });
-  NodeContextWrapper.prototype.issueId = function () {
-    return this.$delegate_bphh46$_0.issueId();
-  };
-  NodeContextWrapper.$metadata$ = {
-    kind: Kind_CLASS,
-    simpleName: 'NodeContextWrapper',
-    interfaces: [NodeContext]
-  };
-  function wrapped($receiver) {
-    return Kotlin.isType($receiver, NodeContextWrapper) ? $receiver : new NodeContextWrapper($receiver);
-  }
-  function Prototype(context) {
+  function Prototype(siteId) {
     Prototype$Companion_getInstance();
-    this.context_0 = context;
+    this.siteId_0 = siteId;
     this.layersMap_0 = LinkedHashMap_init();
-    this.log_8be2vx$ = new ReplicatedLog(this.context_0);
+    this.log_8be2vx$ = new ReplicatedLog(this.siteId_0);
     this.listeners_0 = null;
     this.myUpstream_0 = null;
-    var tmp$;
-    this.layerSequence_0 = new Sequence((tmp$ = this != null ? this.context_0 : null) != null ? tmp$.siteId : null, LogootStrategy_getInstance());
+    this.layerSequence_0 = new Sequence(this != null ? this.siteId_0 : null, LogootStrategy_getInstance());
   }
   Object.defineProperty(Prototype.prototype, 'layers', {
     get: function () {
@@ -2895,7 +2939,8 @@
     }
   });
   Prototype.prototype.addLayer = function (position) {
-    var layerId = this.context_0.issueId();
+    var localIndex = this.log_8be2vx$.nextLocalIndex();
+    var layerId = this.siteId_0.id + '::' + localIndex;
     this.layerSequence_0.insert_19mbxw$(position, layerId);
     return this.getOrCreateLayer_0(layerId);
   };
@@ -2922,23 +2967,29 @@
     var tmp$, tmp$_0, tmp$_1;
     if (Kotlin.isType(change, Change$Insert))
       (tmp$ = this.listeners_0) != null ? (tmp$.layerAdded(change.position, this.getOrCreateLayer_0(change.value)), Unit) : null;
-    else if (Kotlin.isType(change, Change$Delete))
+    else if (Kotlin.isType(change, Change$Delete)) {
       (tmp$_0 = this.listeners_0) != null ? (tmp$_0.layerRemoved(change.position, this.getOrCreateLayer_0(change.value)), Unit) : null;
-    else if (Kotlin.isType(change, Change$Move))
+      this.layersMap_0.remove_11rb$(change.value);
+    } else if (Kotlin.isType(change, Change$Move))
       (tmp$_1 = this.listeners_0) != null ? (tmp$_1.layerMoved(change.from, change.to, this.getOrCreateLayer_0(change.value)), Unit) : null;
     else
       Kotlin.noWhenBranchMatched();
   };
-  Prototype.prototype.setUpstream_5q3qwm$ = function (upstream) {
+  function Prototype$setUpstream$lambda(this$Prototype) {
+    return function () {
+      return Kotlin.Long.fromInt(this$Prototype.log_8be2vx$.nextLocalIndex());
+    };
+  }
+  Prototype.prototype.setUpstream_bnl62h$ = function (upstream) {
     var tmp$;
-    this.myUpstream_0 = upstream;
-    this.layerSequence_0.setUpstream_uy2x1y$(upstream);
+    this.myUpstream_0 = upstream.child_nw7ga7$(Prototype$setUpstream$lambda(this));
+    this.layerSequence_0.setUpstream_uy2x1y$(ensureNotNull(this.myUpstream_0));
     tmp$ = this.layersMap_0.entries.iterator();
     while (tmp$.hasNext()) {
       var tmp$_0 = tmp$.next();
       var layerId = tmp$_0.key;
       var layer = tmp$_0.value;
-      layer.setUpstream_5q3qwm$(upstream.child_61zpoe$(layerId));
+      layer.setUpstream_5q3qwm$(ensureNotNull(this.myUpstream_0).child_61zpoe$(layerId));
     }
   };
   Prototype.prototype.processUpdate_rsal8a$ = function (update) {
@@ -2966,7 +3017,7 @@
   };
   Prototype.prototype.createLayer_0 = function (id) {
     var tmp$, tmp$_0;
-    var layer = new Layer(this.context_0);
+    var layer = new Layer(this.siteId_0);
     if ((tmp$ = this.listeners_0) != null) {
       layer.setListeners_20rwm3$(tmp$);
     }if ((tmp$_0 = this.myUpstream_0) != null) {
@@ -2995,7 +3046,7 @@
   }
   function Prototype$$serializer() {
     this.descriptor_o2lnql$_0 = new SerialClassDescImpl('raid.neuroide.reproto.Prototype', this, 4);
-    this.descriptor.addElement_ivxn3r$('context', false);
+    this.descriptor.addElement_ivxn3r$('siteId', false);
     this.descriptor.addElement_ivxn3r$('layersMap', true);
     this.descriptor.addElement_ivxn3r$('log', true);
     this.descriptor.addElement_ivxn3r$('layerSequence', true);
@@ -3007,16 +3058,13 @@
     }
   });
   Prototype$$serializer.prototype.serialize_awe97i$ = function (encoder, value) {
-    var tmp$, tmp$_0, tmp$_1;
-    tmp$_0 = (tmp$ = this != null ? this.context_0 : null) != null ? tmp$.siteId : null;
-    tmp$_1 = LogootStrategy_getInstance();
     var output = encoder.beginStructure_r0sa6z$(this.descriptor, []);
-    output.encodeSerializableElement_blecud$(this.descriptor, 0, new ContextSerializer(getKClass(NodeContextWrapper)), value.context_0);
+    output.encodeSerializableElement_blecud$(this.descriptor, 0, new ContextSerializer(getKClass(LocalSiteId)), value.siteId_0);
     if (!equals(value.layersMap_0, LinkedHashMap_init()) || output.shouldEncodeElementDefault_3zr2iy$(this.descriptor, 1))
       output.encodeSerializableElement_blecud$(this.descriptor, 1, new LinkedHashMapSerializer(internal.StringSerializer, Layer$$serializer_getInstance()), value.layersMap_0);
-    if (!equals(value.log_8be2vx$, new ReplicatedLog(this.context_0)) || output.shouldEncodeElementDefault_3zr2iy$(this.descriptor, 2))
+    if (!equals(value.log_8be2vx$, new ReplicatedLog(this.siteId_0)) || output.shouldEncodeElementDefault_3zr2iy$(this.descriptor, 2))
       output.encodeSerializableElement_blecud$(this.descriptor, 2, ReplicatedLog$$serializer_getInstance(), value.log_8be2vx$);
-    if (!equals(value.layerSequence_0, new Sequence(tmp$_0, tmp$_1)) || output.shouldEncodeElementDefault_3zr2iy$(this.descriptor, 3))
+    if (!equals(value.layerSequence_0, new Sequence(this != null ? this.siteId_0 : null, LogootStrategy_getInstance())) || output.shouldEncodeElementDefault_3zr2iy$(this.descriptor, 3))
       output.encodeSerializableElement_blecud$(this.descriptor, 3, Sequence$$serializer_getInstance(), value.layerSequence_0);
     output.endStructure_qatsm0$(this.descriptor);
   };
@@ -3032,7 +3080,7 @@
       index = input.decodeElementIndex_qatsm0$(this.descriptor);
       switch (index) {
         case 0:
-          local0 = (bitMask0 & 1) === 0 ? input.decodeSerializableElement_s44l7r$(this.descriptor, 0, new ContextSerializer(getKClass(NodeContextWrapper))) : input.updateSerializableElement_ehubvl$(this.descriptor, 0, new ContextSerializer(getKClass(NodeContextWrapper)), local0);
+          local0 = (bitMask0 & 1) === 0 ? input.decodeSerializableElement_s44l7r$(this.descriptor, 0, new ContextSerializer(getKClass(LocalSiteId))) : input.updateSerializableElement_ehubvl$(this.descriptor, 0, new ContextSerializer(getKClass(LocalSiteId)), local0);
           bitMask0 |= 1;
           break;
         case 1:
@@ -3056,7 +3104,7 @@
     return Prototype_init(bitMask0, local0, local1, local2, local3, null);
   };
   Prototype$$serializer.prototype.childSerializers = function () {
-    return [new ContextSerializer(getKClass(NodeContextWrapper)), new LinkedHashMapSerializer(internal.StringSerializer, Layer$$serializer_getInstance()), ReplicatedLog$$serializer_getInstance(), Sequence$$serializer_getInstance()];
+    return [new ContextSerializer(getKClass(LocalSiteId)), new LinkedHashMapSerializer(internal.StringSerializer, Layer$$serializer_getInstance()), ReplicatedLog$$serializer_getInstance(), Sequence$$serializer_getInstance()];
   };
   Prototype$$serializer.$metadata$ = {
     kind: Kind_OBJECT,
@@ -3069,25 +3117,22 @@
       new Prototype$$serializer();
     }return Prototype$$serializer_instance;
   }
-  function Prototype_init(seen1, context, layersMap, log, layerSequence, serializationConstructorMarker) {
-    var tmp$, tmp$_0, tmp$_1;
-    tmp$_0 = (tmp$ = $this != null ? $this.context_0 : null) != null ? tmp$.siteId : null;
-    tmp$_1 = LogootStrategy_getInstance();
+  function Prototype_init(seen1, siteId, layersMap, log, layerSequence, serializationConstructorMarker) {
     var $this = serializationConstructorMarker || Object.create(Prototype.prototype);
     if ((seen1 & 1) === 0)
-      throw new MissingFieldException('context');
+      throw new MissingFieldException('siteId');
     else
-      $this.context_0 = context;
+      $this.siteId_0 = siteId;
     if ((seen1 & 2) === 0) {
       $this.layersMap_0 = LinkedHashMap_init();
     } else
       $this.layersMap_0 = layersMap;
     if ((seen1 & 4) === 0)
-      $this.log_8be2vx$ = new ReplicatedLog($this.context_0);
+      $this.log_8be2vx$ = new ReplicatedLog($this.siteId_0);
     else
       $this.log_8be2vx$ = log;
     if ((seen1 & 8) === 0)
-      $this.layerSequence_0 = new Sequence(tmp$_0, tmp$_1);
+      $this.layerSequence_0 = new Sequence($this != null ? $this.siteId_0 : null, LogootStrategy_getInstance());
     else
       $this.layerSequence_0 = layerSequence;
     $this.listeners_0 = null;
@@ -3106,12 +3151,12 @@
     simpleName: 'PrototypeListener',
     interfaces: []
   };
-  function ReplicatedLog(context) {
+  function ReplicatedLog(siteId) {
     ReplicatedLog$Companion_getInstance();
-    this.context_0 = context;
-    var tmp$, tmp$_0, tmp$_1, tmp$_2;
-    this.clock_0 = new VectorClock((tmp$_0 = (tmp$ = this != null ? this.context_0 : null) != null ? tmp$.siteId : null) != null ? tmp$_0 : new LocalSiteId(''));
-    this.site_0 = (tmp$_2 = (tmp$_1 = this != null ? this.context_0 : null) != null ? tmp$_1.siteId : null) != null ? tmp$_2.id : null;
+    this.siteId_0 = siteId;
+    var tmp$, tmp$_0;
+    this.clock_0 = new VectorClock((tmp$ = this != null ? this.siteId_0 : null) != null ? tmp$ : new LocalSiteId(''));
+    this.site_0 = (tmp$_0 = this != null ? this.siteId_0 : null) != null ? tmp$_0.id : null;
     this.myUpstream_0 = null;
   }
   Object.defineProperty(ReplicatedLog.prototype, 'currentTimestamp', {
@@ -3128,6 +3173,9 @@
     (tmp$ = this.myUpstream_0) != null ? (tmp$.save_ww7k4j$(update), Unit) : null;
     return update;
   };
+  ReplicatedLog.prototype.nextLocalIndex = function () {
+    return this.clock_0.next().get_61zpoe$(this.site_0);
+  };
   ReplicatedLog.prototype.tryCommit_ww7k4j$ = function (update) {
     var tmp$;
     var tmp$_0 = update.index;
@@ -3137,8 +3185,6 @@
     var currentIndex = this.clock_0.value.get_61zpoe$(origin);
     if (index <= currentIndex) {
       return false;
-    }if (index > (currentIndex + 1 | 0)) {
-      throw IllegalStateException_init('Messages were lost');
     }this.clock_0.update_bd7lk$(new VectorTimestamp(mapOf(to(origin, index))));
     (tmp$ = this.myUpstream_0) != null ? (tmp$.save_ww7k4j$(update), Unit) : null;
     return true;
@@ -3150,7 +3196,7 @@
     return (tmp$ = this.myUpstream_0) != null ? tmp$.restore_z0m90q$(sinceRevision, maxCount) : null;
   };
   ReplicatedLog.prototype.issueLocalTimestamp_0 = function () {
-    var localIndex = this.clock_0.next().get_61zpoe$(this.site_0);
+    var localIndex = this.nextLocalIndex();
     return new LamportTimestamp(Kotlin.Long.fromInt(localIndex), this.site_0);
   };
   function ReplicatedLog$Companion() {
@@ -3172,7 +3218,7 @@
   }
   function ReplicatedLog$$serializer() {
     this.descriptor_i45lm$_0 = new SerialClassDescImpl('raid.neuroide.reproto.ReplicatedLog', this, 2);
-    this.descriptor.addElement_ivxn3r$('context', false);
+    this.descriptor.addElement_ivxn3r$('siteId', false);
     this.descriptor.addElement_ivxn3r$('clock', true);
     ReplicatedLog$$serializer_instance = this;
   }
@@ -3182,11 +3228,11 @@
     }
   });
   ReplicatedLog$$serializer.prototype.serialize_awe97i$ = function (encoder, value) {
-    var tmp$, tmp$_0, tmp$_1;
-    tmp$_1 = (tmp$_0 = (tmp$ = this != null ? this.context_0 : null) != null ? tmp$.siteId : null) != null ? tmp$_0 : new LocalSiteId('');
+    var tmp$, tmp$_0;
+    tmp$_0 = (tmp$ = this != null ? this.siteId_0 : null) != null ? tmp$ : new LocalSiteId('');
     var output = encoder.beginStructure_r0sa6z$(this.descriptor, []);
-    output.encodeSerializableElement_blecud$(this.descriptor, 0, new ContextSerializer(getKClass(NodeContextWrapper)), value.context_0);
-    if (!equals(value.clock_0, new VectorClock(tmp$_1)) || output.shouldEncodeElementDefault_3zr2iy$(this.descriptor, 1))
+    output.encodeSerializableElement_blecud$(this.descriptor, 0, new ContextSerializer(getKClass(LocalSiteId)), value.siteId_0);
+    if (!equals(value.clock_0, new VectorClock(tmp$_0)) || output.shouldEncodeElementDefault_3zr2iy$(this.descriptor, 1))
       output.encodeSerializableElement_blecud$(this.descriptor, 1, VectorClock$$serializer_getInstance(), value.clock_0);
     output.endStructure_qatsm0$(this.descriptor);
   };
@@ -3200,7 +3246,7 @@
       index = input.decodeElementIndex_qatsm0$(this.descriptor);
       switch (index) {
         case 0:
-          local0 = (bitMask0 & 1) === 0 ? input.decodeSerializableElement_s44l7r$(this.descriptor, 0, new ContextSerializer(getKClass(NodeContextWrapper))) : input.updateSerializableElement_ehubvl$(this.descriptor, 0, new ContextSerializer(getKClass(NodeContextWrapper)), local0);
+          local0 = (bitMask0 & 1) === 0 ? input.decodeSerializableElement_s44l7r$(this.descriptor, 0, new ContextSerializer(getKClass(LocalSiteId))) : input.updateSerializableElement_ehubvl$(this.descriptor, 0, new ContextSerializer(getKClass(LocalSiteId)), local0);
           bitMask0 |= 1;
           break;
         case 1:
@@ -3216,7 +3262,7 @@
     return ReplicatedLog_init(bitMask0, local0, local1, null);
   };
   ReplicatedLog$$serializer.prototype.childSerializers = function () {
-    return [new ContextSerializer(getKClass(NodeContextWrapper)), VectorClock$$serializer_getInstance()];
+    return [new ContextSerializer(getKClass(LocalSiteId)), VectorClock$$serializer_getInstance()];
   };
   ReplicatedLog$$serializer.$metadata$ = {
     kind: Kind_OBJECT,
@@ -3229,19 +3275,19 @@
       new ReplicatedLog$$serializer();
     }return ReplicatedLog$$serializer_instance;
   }
-  function ReplicatedLog_init(seen1, context, clock, serializationConstructorMarker) {
-    var tmp$, tmp$_0, tmp$_1, tmp$_2, tmp$_3;
-    tmp$_1 = (tmp$_0 = (tmp$ = $this != null ? $this.context_0 : null) != null ? tmp$.siteId : null) != null ? tmp$_0 : new LocalSiteId('');
+  function ReplicatedLog_init(seen1, siteId, clock, serializationConstructorMarker) {
+    var tmp$, tmp$_0, tmp$_1;
+    tmp$_0 = (tmp$ = $this != null ? $this.siteId_0 : null) != null ? tmp$ : new LocalSiteId('');
     var $this = serializationConstructorMarker || Object.create(ReplicatedLog.prototype);
     if ((seen1 & 1) === 0)
-      throw new MissingFieldException('context');
+      throw new MissingFieldException('siteId');
     else
-      $this.context_0 = context;
+      $this.siteId_0 = siteId;
     if ((seen1 & 2) === 0)
-      $this.clock_0 = new VectorClock(tmp$_1);
+      $this.clock_0 = new VectorClock(tmp$_0);
     else
       $this.clock_0 = clock;
-    $this.site_0 = (tmp$_3 = (tmp$_2 = $this != null ? $this.context_0 : null) != null ? tmp$_2.siteId : null) != null ? tmp$_3.id : null;
+    $this.site_0 = (tmp$_1 = $this != null ? $this.siteId_0 : null) != null ? tmp$_1.id : null;
     $this.myUpstream_0 = null;
     return $this;
   }
@@ -3250,17 +3296,11 @@
     simpleName: 'ReplicatedLog',
     interfaces: []
   };
-  function getSerialModuleForContext$lambda(closure$context) {
-    return function ($receiver) {
-      $receiver.contextual_cfhkba$(getKClass(NodeContextWrapper), new ContextualInjectorSerializer(wrapped(closure$context)));
-      return Unit;
-    };
+  function getSerialModuleForContext(siteId) {
+    return getCrdtSerializers(siteId);
   }
-  function getSerialModuleForContext(context) {
-    return plus_2(getCrdtSerializers(context.siteId), SerializersModule(getSerialModuleForContext$lambda(context)));
-  }
-  function SerializationManager(context) {
-    this.module_0 = getSerialModuleForContext(context);
+  function SerializationManager(siteId) {
+    this.module_0 = getSerialModuleForContext(siteId);
   }
   SerializationManager.prototype.serialize_1xcr1u$ = function (prototype) {
     return this.getJson_0().stringify_tf03ej$(Prototype$Companion_getInstance().serializer(), prototype);
@@ -3322,7 +3362,7 @@
   });
   Update$$serializer.prototype.serialize_awe97i$ = function (encoder, value) {
     var output = encoder.beginStructure_r0sa6z$(this.descriptor, []);
-    output.encodeSerializableElement_blecud$(this.descriptor, 0, IdChain$$serializer_getInstance(), value.id);
+    output.encodeSerializableElement_blecud$(this.descriptor, 0, new IdChain$Serializer(), value.id);
     output.encodeSerializableElement_blecud$(this.descriptor, 1, LamportTimestamp$$serializer_getInstance(), value.index);
     output.encodeSerializableElement_blecud$(this.descriptor, 2, UpdatePayload$$serializer_getInstance(), value.payload);
     output.endStructure_qatsm0$(this.descriptor);
@@ -3338,7 +3378,7 @@
       index = input.decodeElementIndex_qatsm0$(this.descriptor);
       switch (index) {
         case 0:
-          local0 = (bitMask0 & 1) === 0 ? input.decodeSerializableElement_s44l7r$(this.descriptor, 0, IdChain$$serializer_getInstance()) : input.updateSerializableElement_ehubvl$(this.descriptor, 0, IdChain$$serializer_getInstance(), local0);
+          local0 = (bitMask0 & 1) === 0 ? input.decodeSerializableElement_s44l7r$(this.descriptor, 0, new IdChain$Serializer()) : input.updateSerializableElement_ehubvl$(this.descriptor, 0, new IdChain$Serializer(), local0);
           bitMask0 |= 1;
           break;
         case 1:
@@ -3358,7 +3398,7 @@
     return Update_init(bitMask0, local0, local1, local2, null);
   };
   Update$$serializer.prototype.childSerializers = function () {
-    return [IdChain$$serializer_getInstance(), LamportTimestamp$$serializer_getInstance(), UpdatePayload$$serializer_getInstance()];
+    return [new IdChain$Serializer(), LamportTimestamp$$serializer_getInstance(), UpdatePayload$$serializer_getInstance()];
   };
   Update$$serializer.$metadata$ = {
     kind: Kind_OBJECT,
@@ -3478,11 +3518,21 @@
   var package$raid = _.raid || (_.raid = {});
   var package$neuroide = package$raid.neuroide || (package$raid.neuroide = {});
   var package$reproto = package$neuroide.reproto || (package$neuroide.reproto = {});
+  package$reproto.ChainedUpstreamBud = ChainedUpstreamBud;
   package$reproto.ChainedUpstream = ChainedUpstream;
   package$reproto.ClientGateway = ClientGateway;
   package$reproto.ClientNode = ClientNode;
   var package$common = package$reproto.common || (package$reproto.common = {});
   package$common.ContextualInjectorSerializer = ContextualInjectorSerializer;
+  package$common.DelegatedListSerializer = DelegatedListSerializer;
+  package$common.DelegatedMapSerializer = DelegatedMapSerializer;
+  IndexedSet.Serializer = IndexedSet$Serializer;
+  Object.defineProperty(IndexedSet, 'Companion', {
+    get: IndexedSet$Companion_getInstance
+  });
+  package$common.IndexedSet_init_euev0d$ = IndexedSet_init;
+  package$common.IndexedSet = IndexedSet;
+  package$common.indexedSetOf_a7mofp$ = indexedSetOf;
   Object.defineProperty(LamportTimestamp, 'Companion', {
     get: LamportTimestamp$Companion_getInstance
   });
@@ -3511,10 +3561,7 @@
   Object.defineProperty(VectorTimestamp, 'Companion', {
     get: VectorTimestamp$Companion_getInstance
   });
-  Object.defineProperty(VectorTimestamp, '$serializer', {
-    get: VectorTimestamp$$serializer_getInstance
-  });
-  package$crdt.VectorTimestamp_init_z1k85a$ = VectorTimestamp_init;
+  VectorTimestamp.Serializer = VectorTimestamp$Serializer;
   package$crdt.VectorTimestamp = VectorTimestamp;
   Object.defineProperty(VectorClock, 'Companion', {
     get: VectorClock$Companion_getInstance
@@ -3583,16 +3630,8 @@
   Object.defineProperty(Sequence, '$serializer', {
     get: Sequence$$serializer_getInstance
   });
-  package$seq.Sequence_init_4hvzvl$ = Sequence_init;
+  package$seq.Sequence_init_b4706h$ = Sequence_init;
   package$seq.Sequence = Sequence;
-  Object.defineProperty(SequenceElement, 'Companion', {
-    get: SequenceElement$Companion_getInstance
-  });
-  Object.defineProperty(SequenceElement, '$serializer', {
-    get: SequenceElement$$serializer_getInstance
-  });
-  package$seq.SequenceElement_init_fgibw1$ = SequenceElement_init;
-  package$seq.SequenceElement = SequenceElement;
   Object.defineProperty(SequenceOperation, 'Companion', {
     get: SequenceOperation$Companion_getInstance
   });
@@ -3622,15 +3661,11 @@
   });
   package$seq.SequenceOperationMove_init_36cupo$ = SequenceOperationMove_init;
   package$seq.SequenceOperationMove = SequenceOperationMove;
-  package$reproto.DefaultContext = DefaultContext;
+  IdChain.Serializer = IdChain$Serializer;
   Object.defineProperty(IdChain, 'Companion', {
     get: IdChain$Companion_getInstance
   });
-  Object.defineProperty(IdChain, '$serializer', {
-    get: IdChain$$serializer_getInstance
-  });
-  package$reproto.IdChain_init_n391bk$ = IdChain_init;
-  package$reproto.IdChain_init_vqirvp$ = IdChain_init_0;
+  package$reproto.IdChain_init_vqirvp$ = IdChain_init;
   package$reproto.IdChain = IdChain;
   Object.defineProperty(Layer, 'Companion', {
     get: Layer$Companion_getInstance
@@ -3638,22 +3673,16 @@
   Object.defineProperty(Layer, '$serializer', {
     get: Layer$$serializer_getInstance
   });
-  package$reproto.Layer_init_hwmkcy$ = Layer_init;
+  package$reproto.Layer_init_fneo06$ = Layer_init;
   package$reproto.Layer = Layer;
   package$reproto.LogUpstream = LogUpstream;
-  package$reproto.NodeContext = NodeContext;
-  Object.defineProperty(NodeContextWrapper, 'Companion', {
-    get: NodeContextWrapper$Companion_getInstance
-  });
-  package$reproto.NodeContextWrapper = NodeContextWrapper;
-  package$reproto.wrapped_41yg46$ = wrapped;
   Object.defineProperty(Prototype, 'Companion', {
     get: Prototype$Companion_getInstance
   });
   Object.defineProperty(Prototype, '$serializer', {
     get: Prototype$$serializer_getInstance
   });
-  package$reproto.Prototype_init_yfjl4t$ = Prototype_init;
+  package$reproto.Prototype_init_c6bv4l$ = Prototype_init;
   package$reproto.Prototype = Prototype;
   package$reproto.PrototypeListener = PrototypeListener;
   Object.defineProperty(ReplicatedLog, 'Companion', {
@@ -3662,7 +3691,7 @@
   Object.defineProperty(ReplicatedLog, '$serializer', {
     get: ReplicatedLog$$serializer_getInstance
   });
-  package$reproto.ReplicatedLog_init_lnfoiw$ = ReplicatedLog_init;
+  package$reproto.ReplicatedLog_init_5ikj9c$ = ReplicatedLog_init;
   package$reproto.ReplicatedLog = ReplicatedLog;
   package$reproto.SerializationManager = SerializationManager;
   Object.defineProperty(Update, 'Companion', {
@@ -3682,21 +3711,21 @@
   package$reproto.UpdatePayload_init_ffzfk3$ = UpdatePayload_init;
   package$reproto.UpdatePayload = UpdatePayload;
   ContextualInjectorSerializer.prototype.patch_mynpiu$ = KSerializer.prototype.patch_mynpiu$;
+  DelegatedListSerializer.prototype.patch_mynpiu$ = KSerializer.prototype.patch_mynpiu$;
+  DelegatedMapSerializer.prototype.patch_mynpiu$ = KSerializer.prototype.patch_mynpiu$;
   LamportTimestamp$$serializer.prototype.patch_mynpiu$ = GeneratedSerializer.prototype.patch_mynpiu$;
   LamportClock$$serializer.prototype.patch_mynpiu$ = GeneratedSerializer.prototype.patch_mynpiu$;
   PlainClock$$serializer.prototype.patch_mynpiu$ = GeneratedSerializer.prototype.patch_mynpiu$;
-  VectorTimestamp$$serializer.prototype.patch_mynpiu$ = GeneratedSerializer.prototype.patch_mynpiu$;
   VectorClock$$serializer.prototype.patch_mynpiu$ = GeneratedSerializer.prototype.patch_mynpiu$;
   LWWRegister$LWWRegisterSet$$serializer.prototype.patch_mynpiu$ = GeneratedSerializer.prototype.patch_mynpiu$;
   LWWRegister$$serializer.prototype.patch_mynpiu$ = GeneratedSerializer.prototype.patch_mynpiu$;
   Doublet$$serializer.prototype.patch_mynpiu$ = GeneratedSerializer.prototype.patch_mynpiu$;
   Identifier$$serializer.prototype.patch_mynpiu$ = GeneratedSerializer.prototype.patch_mynpiu$;
+  Sequence$Element$$serializer.prototype.patch_mynpiu$ = GeneratedSerializer.prototype.patch_mynpiu$;
   Sequence$$serializer.prototype.patch_mynpiu$ = GeneratedSerializer.prototype.patch_mynpiu$;
-  SequenceElement$$serializer.prototype.patch_mynpiu$ = GeneratedSerializer.prototype.patch_mynpiu$;
   SequenceOperationInsert$$serializer.prototype.patch_mynpiu$ = GeneratedSerializer.prototype.patch_mynpiu$;
   SequenceOperationDelete$$serializer.prototype.patch_mynpiu$ = GeneratedSerializer.prototype.patch_mynpiu$;
   SequenceOperationMove$$serializer.prototype.patch_mynpiu$ = GeneratedSerializer.prototype.patch_mynpiu$;
-  IdChain$$serializer.prototype.patch_mynpiu$ = GeneratedSerializer.prototype.patch_mynpiu$;
   Layer$$serializer.prototype.patch_mynpiu$ = GeneratedSerializer.prototype.patch_mynpiu$;
   Prototype$$serializer.prototype.patch_mynpiu$ = GeneratedSerializer.prototype.patch_mynpiu$;
   ReplicatedLog$$serializer.prototype.patch_mynpiu$ = GeneratedSerializer.prototype.patch_mynpiu$;
