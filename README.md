@@ -27,7 +27,7 @@ To run in production you have to configure it.
 |                                             |                                                              | UNSUPPORTED MEDIA TYPE | Text/Plain       | Only JSON is accepted                                        |
 |                                             |                                                              | BAD REQUEST            | Text/Plain       | Object is corrupted                                          |
 
-### Data foramts
+### Data formats
 
 The service is supposed to be used in conjunction with the library reproto, which handles serialization and deserialization itself. However, it may come in handy to know some aspects of the data format to perform validation and work with prototype revisions.
 
@@ -66,11 +66,11 @@ Revision is accepted by `GET /prototypes/{id}/updates?since=revision` endpoint a
 }
 ```
 
-Note that the channel between client and service must not reorder messages. Attempts to feed the node by updates which were already applied to the prototype will be silently skipped. However, reordering or loss of messages will result in runtime errors (luckily) or model corruption (unluckily).
+Note that **the channel** between client and service **must not reorder messages**. Attempts to feed the node with updates which were already applied to the prototype will be silently skipped. However, reordering or loss of messages will result in runtime errors (luckily) or model corruption (unluckily).
 
 ### Configuration
 
-Minor adjsutments can be made with command line arguments.
+Minor adjustments can be made with command line arguments.
 
 ```sh
 # to use 8000 port and disable example:
